@@ -1,11 +1,11 @@
 /*
 COLOR PALETTE
-#483D8B - dark slate blue
-#7FFF00 - chartreuse
-#00008B - dark blue
 #FFFFF0 - ivory
-#191970 - midnight blue
 #000000 - black
+#303030 - (custom) text file gray
+#7FFF00 - (custom) terminal username green
+#2f00ff - (custom) terminal path blue
+#9077ff - (custom) nav link light blue
 */
 
 /* Global syles
@@ -26,12 +26,28 @@ img {
 .terminal-path {
     color: #2f00ff;
 }
+a {
+    color: #2f00ff;
+}
+a:hover {
+    color: #9077ff;
+}
 
 /* Profile
 ------------------------------*/
 
 /* Projects
 ------------------------------*/
+.projects a {
+    color: #F7FFF7;
+    background: #2F3061;
+    text-decoration: none;
+    padding: 8px;
+    border-radius: 4px;
+}
+.projects a:hover {
+    background: rgba(47, 48, 97, 80%)
+}
 
 /* Work Experience
 ------------------------------*/
