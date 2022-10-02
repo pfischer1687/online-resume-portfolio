@@ -1,0 +1,43 @@
+/*
+COLOR PALETTE
+#483D8B - dark slate blue
+#7FFF00 - chartreuse
+#00008B - dark blue
+#FFFFF0 - ivory
+#191970 - midnight blue
+#000000 - black
+*/
+
+/* Global syles
+------------------------------*/
+body {
+    color: #fffff0;
+    background-color: #000000;
+}
+img {
+    width: 300px;
+}
+.text-file {
+    background-color: #303030;
+}
+.terminal-usr {
+    color: #7FFF00;
+}
+.terminal-path {
+    color: #2f00ff;
+}
+
+/* Profile
+------------------------------*/
+
+/* Projects
+------------------------------*/
+
+/* Work Experience
+------------------------------*/
+
+/* Education
+------------------------------*/
+
+/* Contact info
+------------------------------*/
