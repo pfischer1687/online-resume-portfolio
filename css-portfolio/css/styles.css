@@ -2,6 +2,7 @@
 COLOR PALETTE
 #FFFFF0 - ivory
 #000000 - black
+#8B008B - dark magenta
 #303030 - (custom) text file gray
 #7FFF00 - (custom) terminal username green
 #2f00ff - (custom) terminal path blue
@@ -10,21 +11,23 @@ COLOR PALETTE
 
 /* Global syles
 ------------------------------*/
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
 body {
     color: #fffff0;
     background-color: #000000;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
 }
 img {
     width: 300px;
-}
-.text-file {
-    background-color: #303030;
-}
-.terminal-usr {
-    color: #7FFF00;
-}
-.terminal-path {
-    color: #2f00ff;
 }
 a {
     color: #2f00ff;
@@ -32,28 +35,122 @@ a {
 a:hover {
     color: #9077ff;
 }
+h2 {
+    font-size: 30px;
+    margin: 0;
+    text-align: center
+}
+.text-file {
+    background-color: #303030;
+    padding: 15px 15px;
+}
+.terminal-code {
+    font-family: monospace, monospace;
+}
+.terminal-usr {
+    color: #7FFF00;
+}
+.terminal-path {
+    color: #2f00ff;
+}
+.content-wrap {
+    width: 800px;
+    margin: 0 auto;
+}
+.divider > section {
+    overflow: hidden;
+    border-bottom: 1px dashed #8B008B;
+    padding: 25px 0;
+}
+.divider > section:last-of-type {
+    border-bottom: none;
+}
 
-/* Profile
+/* About
 ------------------------------*/
+.header {
+    background: #8B008B;
+    overflow: auto;
+    padding: 60px 0;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+}
+.header h1, .header h2 {
+    font-weight: 400;
+    margin: 0;
+}
+.header h1 {
+    font-size: 100px;
+}
+.header h2 {
+    font-size: 45px;
+}
 
 /* Projects
 ------------------------------*/
 .projects a {
     color: #F7FFF7;
-    background: #2F3061;
+    background: #0004ff;
     text-decoration: none;
     padding: 8px;
     border-radius: 4px;
+    display: inline-block;
+    display: flex;
+    justify-content: center;
 }
 .projects a:hover {
-    background: rgba(47, 48, 97, 80%)
+    background: rgba(128, 130, 255, 0.8);
 }
-
-/* Work Experience
-------------------------------*/
+.projects h3 {
+    margin: 0;
+}
+.projects-item {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    column-gap: 20px;
+}
 
 /* Education
 ------------------------------*/
+.education h3, .education p {
+    margin: 0;
+}
+.education h3 + p {
+    font-style: italic;
+}
+
+/* Experience
+------------------------------*/
+.job-item {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 20px;
+}
+.job-details h3, .job-details p {
+    margin: 0;
+}
+.experience h3 + p {
+    font-style: italic;
+}
 
 /* Contact info
 ------------------------------*/
+.contact-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    text-align: center
+}
+.contact-list a {
+    color: #F7FFF7;
+    background: #0004ff;
+    text-decoration: none;
+    padding: 8px;
+    border-radius: 4px;
+    display: inline-block;
+    margin: 30px;
+}
+.contact-list a:hover {
+    background: rgba(128, 130, 255, 0.8);
+}
