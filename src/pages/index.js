@@ -356,7 +356,9 @@ const IndexPage = () => {
             </a>
           </li>
           <li>
-            <a href="mailto:pfisch789@gmail.com">pfisch789@gmail.com</a>
+            <a href="mailto:paulfischerdev@gmail.com">
+              paulfischerdev@gmail.com
+            </a>
           </li>
           <li>
             <a
