@@ -114,7 +114,7 @@ const IndexPage = () => {
               Probability/Statistics.
             </p>
             {/* <!-- wait for ProQuest to publish
-            <a href="#" target="_blank">View project / case study</a>
+            <a href="#" target="_blank" rel="noreferrer">View project / case study</a>
             --> */}
           </div>
         </section>
@@ -140,6 +140,7 @@ const IndexPage = () => {
             <a
               href="https://community.wolfram.com/groups/-/m/t/2162975"
               target="_blank"
+              rel="noreferrer"
             >
               View project
             </a>
@@ -171,6 +172,7 @@ const IndexPage = () => {
             <a
               href="https://github.com/pfischer1687/Data-Science/blob/main/Wolfram%20Certified%20Level%20II%20in%20Multiparadigm%20Data%20Science/ComputationalEssayPaulFischer.pdf"
               target="_blank"
+              rel="noreferrer"
             >
               View project
             </a>
@@ -200,6 +202,7 @@ const IndexPage = () => {
             <a
               href="https://github.com/pfischer1687/Physics/blob/main/PHYS%20481%20Senior%20Thesis/phys_481_senior_thesis.pdf"
               target="_blank"
+              rel="noreferrer"
             >
               View project
             </a>
@@ -351,7 +354,11 @@ const IndexPage = () => {
         {/* <!-- Social media and contact links. Add or remove any networks. --> */}
         <ul className={styles.contactList}>
           <li>
-            <a href="https://github.com/pfischer1687" target="_blank">
+            <a
+              href="https://github.com/pfischer1687"
+              target="_blank"
+              rel="noreferrer"
+            >
               GitHub
             </a>
           </li>
@@ -364,6 +371,7 @@ const IndexPage = () => {
             <a
               href="https://www.linkedin.com/in/paul-fischer-816042127/"
               target="_blank"
+              rel="noreferrer"
             >
               LinkedIn
             </a>
