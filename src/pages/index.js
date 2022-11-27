@@ -2,71 +2,54 @@ import * as React from "react";
 import * as styles from "../components/index.module.css";
 import { StaticImage } from "gatsby-plugin-image";
 import Seo from "../components/seo";
+import Layout from "../components/layout";
+import "../components/global.css";
 
 const IndexPage = () => {
   return (
-    <main>
+    <Layout>
       {/* <!-- ***********************  ABOUT / PROFILE  *********************** --> */}
-      <header>
-        <div className={styles.header}>
-          <div className={styles.contentWrap}>
-            <h1>Paul Fischer</h1>
-            <h2>Software Engineer</h2>
+      <div class={`${styles.contentWrap} ${styles.terminalCode}`}>
+        <h3 id="about">
+          <span className={styles.terminalUsr}>guest@guest</span>:
+          <span className={styles.terminalPath}>~</span>$ cd about
+        </h3>
+        <h3>
+          <span className={styles.terminalUsr}>guest@guest</span>:
+          <span className={styles.terminalPath}>~/about</span>$ cat about.txt
+        </h3>
+      </div>
+
+      <section className={`${styles.textFile} ${styles.contentWrap}`}>
+        <h2 className={styles.aboutMe}>About Me</h2>
+        <section className={styles.aboutItem}>
+          <div className={styles.aboutImg}>
+            <StaticImage src="../images/about-me.jpg" alt="Photo of me." />
           </div>
-        </div>
 
-        <div className={`${styles.contentWrap} ${styles.terminalCode}`}>
-          <h3>
-            <span className={styles.terminalUsr}>guest@guest</span>:
-            <span className={styles.terminalPath}>~</span>$ ls
-          </h3>
-          <h3>
-            <a href="#about">about</a>&emsp;<a href="#contact">contact</a>&emsp;
-            <a href="#education">education</a>&emsp;
-            <a href="#experience">experience</a>&emsp;
-            <a href="#projects">projects</a>
-          </h3>
-          <h3 id="about">
-            <span className={styles.terminalUsr}>guest@guest</span>:
-            <span className={styles.terminalPath}>~</span>$ cd about
-          </h3>
-          <h3>
-            <span className={styles.terminalUsr}>guest@guest</span>:
-            <span className={styles.terminalPath}>~/about</span>$ cat about.txt
-          </h3>
-        </div>
-
-        <section className={`${styles.textFile} ${styles.contentWrap}`}>
-          <h2 className={styles.aboutMe}>About Me</h2>
-          <section className={styles.aboutItem}>
-            <div className={styles.aboutImg}>
-              <StaticImage src="../images/about-me.JPG" alt="Photo of me." />
-            </div>
-
-            <div className={styles.aboutDetails}>
-              <p>
-                Hi! I'm Paul. I love to code everything from websites to
-                computational physics simulations, financial data science,
-                embedded systems in arduino, and more!
-              </p>
-              <p>
-                After graduating with a B.S. in Physics with a minor in Applied
-                Mathematics, I taught high school Physics and AP Physics. I
-                enjoyed sharing my knowledge but wanted to return to do more
-                research. During my M.S. in Computational Physics, I really
-                developed my love of coding. My research involved working with
-                Markov chain Monte Carlo simulations in the C programming
-                language distributed among several nodes of a High Performance
-                Cluster (HPC) in parallel via Open MPI on Red Hat Enterprise
-                Linux. The analysis of my data was done in Python and utilized
-                the libraries pandas, NumPy, SciPy, SymPy, and Matplotlib. My
-                love f coding for my research drew me to my current career goals
-                in software engineering.
-              </p>
-            </div>
-          </section>
+          <div className={styles.aboutDetails}>
+            <p>
+              Hi! I'm Paul. I love to code everything from websites to
+              computational physics simulations, financial data science,
+              embedded systems in arduino, and more!
+            </p>
+            <p>
+              After graduating with a B.S. in Physics with a minor in Applied
+              Mathematics, I taught high school Physics and AP Physics. I
+              enjoyed sharing my knowledge but wanted to return to do more
+              research. During my M.S. in Computational Physics, I really
+              developed my love of coding. My research involved working with
+              Markov chain Monte Carlo simulations in the C programming language
+              distributed among several nodes of a High Performance Cluster
+              (HPC) in parallel via Open MPI on Red Hat Enterprise Linux. The
+              analysis of my data was done in Python and utilized the libraries
+              pandas, NumPy, SciPy, SymPy, and Matplotlib. My love f coding for
+              my research drew me to my current career goals in software
+              engineering.
+            </p>
+          </div>
         </section>
-      </header>
+      </section>
 
       {/* <!-- ********************  PROJECTS / PORTFOLIO  ********************* --> */}
       <div className={`${styles.contentWrap} ${styles.terminalCode}`}>
@@ -333,52 +316,7 @@ const IndexPage = () => {
         </section>
         {/* <!-- End of Job block. --> */}
       </section>
-
-      {/* <!-- *****************  CONTACT INFO / SOCIAL MEDIA  ***************** --> */}
-      <div className={`${styles.contentWrap} ${styles.terminalCode}`}>
-        <h3 id="contact">
-          <span className={styles.terminalUsr}>guest@guest</span>:
-          <span className={styles.terminalPath}>~/experience</span>$ cd
-          ~/contact
-        </h3>
-        <h3>
-          <span className={styles.terminalUsr}>guest@guest</span>:
-          <span className={styles.terminalPath}>~/contact</span>$ cat
-          contact.txt
-        </h3>
-      </div>
-
-      <footer className={`${styles.textFile} ${styles.contentWrap}`}>
-        <h2>Let's Keep in Touch!</h2>
-
-        {/* <!-- Social media and contact links. Add or remove any networks. --> */}
-        <ul className={styles.contactList}>
-          <li>
-            <a
-              href="https://github.com/pfischer1687"
-              target="_blank"
-              rel="noreferrer"
-            >
-              GitHub
-            </a>
-          </li>
-          <li>
-            <a href="mailto:paulfischerdev@gmail.com">
-              paulfischerdev@gmail.com
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.linkedin.com/in/paul-fischer-816042127/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              LinkedIn
-            </a>
-          </li>
-        </ul>
-      </footer>
-    </main>
+    </Layout>
   );
 };
 
