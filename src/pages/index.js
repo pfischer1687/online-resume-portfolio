@@ -9,7 +9,7 @@ const IndexPage = () => {
   return (
     <Layout>
       {/* <!-- ***********************  ABOUT / PROFILE  *********************** --> */}
-      <div class={`${styles.contentWrap} ${styles.terminalCode}`}>
+      <div className={`${styles.contentWrap} ${styles.terminalCode}`}>
         <h3 id="about">
           <span className={styles.terminalUsr}>guest@guest</span>:
           <span className={styles.terminalPath}>~</span>$ cd about

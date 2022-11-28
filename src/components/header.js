@@ -5,11 +5,13 @@ import { StaticImage } from "gatsby-plugin-image";
 const Header = () => (
   <header>
     <div className={styles.contentWrap}>
-      <StaticImage
-        src="../../static/favicon.png"
-        alt="PF logo"
-        className={styles.logo}
-      />
+      <a href="/">
+        <StaticImage
+          src="../../static/favicon.png"
+          alt="PF logo"
+          className={styles.logo}
+        />
+      </a>
       <div>
         <h1>Paul Fischer</h1>
         <h2>Software Engineer</h2>

@@ -6,19 +6,17 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header />
-      <nav class={`${styles.contentWrap} ${styles.terminalCode}`}>
-        <div class="content-wrap terminal-code">
-          <h3>
-            <span className={styles.terminalUsr}>guest@guest</span>:
-            <span className={styles.terminalPath}>~</span>$ ls
-          </h3>
-          <h3>
-            <a href="#about">about</a>&emsp;<a href="#contact">contact</a>&emsp;
-            <a href="#education">education</a>&emsp;
-            <a href="#experience">experience</a>&emsp;
-            <a href="#projects">projects</a>
-          </h3>
-        </div>
+      <nav className={`${styles.contentWrap} ${styles.terminalCode}`}>
+        <h3>
+          <span className={styles.terminalUsr}>guest@guest</span>:
+          <span className={styles.terminalPath}>~</span>${" "}
+          <span className={styles.typing}>ls</span>
+        </h3>
+        <h3>
+          <a href="#about">about</a> <a href="#contact">contact</a>{" "}
+          <a href="#education">education</a>{" "}
+          <a href="#experience">experience</a> <a href="#projects">projects</a>
+        </h3>
       </nav>
       <main>{children}</main>
       {/* <!-- *****************  CONTACT INFO / SOCIAL MEDIA  ***************** --> */}
