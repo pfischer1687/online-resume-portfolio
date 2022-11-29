@@ -79,13 +79,50 @@ a {
   opacity: 1;
 }
 
-.contact-links {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  width: 600px;
-  text-align: center;
-  margin-left: -19px;
-  margin-top: 30px;
+/* Responsive
+------------------------------*/
+@media screen and (min-width: 750px) {
+  .contact-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 600px;
+    text-align: center;
+    margin-left: -19px;
+    margin-top: 15px;
+  }
+  .contact-links img {
+    height: 40px;
+  }
+  .gmail-name::after {
+    content: "paulfischerdev@gmail.com";
+  }
+  .education-link::after {
+    content: "education";
+  }
+  .experience-link::after {
+    content: "experience";
+  }
+}
+@media screen and (max-width: 749px) {
+  .contact-links {
+    display: flex;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 15px;
+  }
+  .contact-links img {
+    height: 30px;
+  }
+  .gmail-name::after {
+    content: "Gmail";
+  }
+  .education-link::after {
+    content: "edu";
+  }
+  .experience-link::after {
+    content: "exp";
+  }
 }
 
 /* Old footer */

@@ -29,8 +29,9 @@ const Layout = ({ children }) => {
           <span id="nav-terminal-ls">ls</span>
         </h3>
         <h3 id="nav-links" className={styles.hidden}>
-          <a href="#about">about</a> <a href="#education">education</a>{" "}
-          <a href="#experience">experience</a> <a href="#projects">projects</a>{" "}
+          <a href="#about">about</a> <a href="#projects">projects</a>{" "}
+          <a className={styles.educationLink} href="#education"></a>{" "}
+          <a className={styles.experienceLink} href="#experience"></a>
           <div className={styles.contactLinks}>
             <a
               href="https://github.com/pfischer1687"
@@ -39,7 +40,6 @@ const Layout = ({ children }) => {
             >
               <div>
                 <StaticImage
-                  height={50}
                   src="../images/github-logo.png"
                   alt="GitHub logo"
                 />
@@ -53,7 +53,6 @@ const Layout = ({ children }) => {
             >
               <div>
                 <StaticImage
-                  height={50}
                   src="../images/linkedin-logo.png"
                   alt="LinkedIn logo"
                 />
@@ -67,7 +66,6 @@ const Layout = ({ children }) => {
             >
               <div>
                 <StaticImage
-                  height={50}
                   src="../images/twitter-logo.png"
                   alt="Twitter logo"
                 />
@@ -81,17 +79,13 @@ const Layout = ({ children }) => {
             >
               <div>
                 <StaticImage
-                  height={50}
                   src="../images/gmail-logo.png"
                   alt="Gmail logo"
                   style={{ filter: "invert(100%)" }}
                 />
               </div>
-              <div>paulfischerdev@gmail.com</div>
+              <div className={styles.gmailName}></div>
             </a>
-            {/* <a href="mailto:paulfischerdev@gmail.com">
-              paulfischerdev@gmail.com
-            </a> */}
           </div>
         </h3>
         <h3 id="curr-terminal" className={styles.hidden}>
