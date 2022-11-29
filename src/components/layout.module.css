@@ -34,9 +34,8 @@ a {
 }
 .typing::after {
   width: 15px;
-  background: white;
-  animation: typingAnim 0.5s steps(2) 1s forwards,
-    blinkingAnim 750ms infinite forwards;
+  background: transparent;
+  animation: typingAnim 0.5s steps(2) 1s forwards, blinkingAnim 750ms 4;
 }
 @keyframes typingAnim {
   to {
@@ -45,8 +44,15 @@ a {
 }
 @keyframes blinkingAnim {
   50% {
-    background: transparent;
+    background: white;
   }
+}
+.hidden {
+  opacity: 0;
+  transition: all 1s;
+}
+.show {
+  opacity: 1;
 }
 
 footer {

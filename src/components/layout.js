@@ -3,11 +3,16 @@ import * as styles from "./layout.module.css";
 import Header from "./header";
 
 const Layout = ({ children }) => {
+  React.useEffect(() => {
+    const navTerminal = document.getElementById("nav-terminal");
+    setTimeout(() => navTerminal.classList.add(`${styles.show}`), 1000);
+  });
+
   return (
     <>
       <Header />
       <nav className={`${styles.contentWrap} ${styles.terminalCode}`}>
-        <h3>
+        <h3 id="nav-terminal" className={styles.hidden}>
           <span className={styles.terminalUsr}>guest@guest</span>:
           <span className={styles.terminalPath}>~</span>${" "}
           <span className={styles.typing}>ls</span>
