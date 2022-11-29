@@ -47,6 +47,30 @@ a {
     background: white;
   }
 }
+
+.typing-inf {
+  position: relative;
+}
+.typing-inf::before,
+.typing-inf::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.typing-inf::after {
+  width: 15px;
+  background: transparent;
+  animation: blinkingInf 1s infinite;
+}
+@keyframes blinkingInf {
+  50% {
+    background: white;
+  }
+}
+
 .hidden {
   opacity: 0;
   transition: all 1s;
@@ -54,6 +78,17 @@ a {
 .show {
   opacity: 1;
 }
+
+.contact-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 600px;
+  text-align: center;
+  margin-left: -19px;
+  margin-top: 30px;
+}
+
+/* Old footer */
 
 footer {
   margin-bottom: 25px;
