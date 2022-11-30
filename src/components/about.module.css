@@ -1,0 +1,104 @@
+.content-wrap {
+  max-width: 800px;
+  width: 85%;
+  margin: 0 auto;
+}
+.terminal-code {
+  font-family: monospace, monospace;
+}
+
+/* For staggering the animation */
+.hidden {
+  opacity: 0;
+  transition: all 1s;
+}
+.show {
+  opacity: 1;
+}
+
+.terminal-usr {
+  color: #8b008b;
+}
+.terminal-path {
+  color: rgb(111, 111, 255);
+}
+
+.text-file {
+  background-color: #303030;
+  padding: 15px 15px;
+}
+.about-me {
+  padding-bottom: 30px;
+}
+.about-img {
+  width: 300px;
+}
+.about-details {
+  margin-top: -15px;
+}
+
+/* Typing animation */
+.typing {
+  position: relative;
+}
+.typing::before,
+.typing::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.typing::before {
+  background: black;
+  animation: typingAnim 0.5s steps(2) 1s forwards;
+}
+.typing::after {
+  width: 15px;
+  background: transparent;
+  animation: typingAnim 0.5s steps(2) 1s forwards, blinkingAnim 750ms 4;
+}
+@keyframes typingAnim {
+  to {
+    left: 100%;
+  }
+}
+@keyframes blinkingAnim {
+  50% {
+    background: white;
+  }
+}
+
+/* Responsive
+------------------------------*/
+@media screen and (min-width: 750px) {
+  .about-item {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    column-gap: 20px;
+  }
+  .skill-icons {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    /* width: 600px; */
+    text-align: center;
+    margin-left: -27px;
+    margin-top: 15px;
+  }
+  .skill-icons img {
+    height: 40px;
+  }
+}
+@media screen and (max-width: 749px) {
+  .skill-icons {
+    display: flex;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 15px;
+  }
+  .skill-icons img {
+    height: 30px;
+  }
+}

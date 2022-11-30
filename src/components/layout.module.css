@@ -87,7 +87,7 @@ a {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     width: 600px;
     text-align: center;
-    margin-left: -19px;
+    margin-left: -27px;
     margin-top: 15px;
   }
   .contact-links img {
@@ -97,10 +97,10 @@ a {
     content: "paulfischerdev@gmail.com";
   }
   .education-link::after {
-    content: "education";
+    content: "cation";
   }
   .experience-link::after {
-    content: "experience";
+    content: "erience";
   }
 }
 @media screen and (max-width: 749px) {
@@ -116,12 +116,6 @@ a {
   }
   .gmail-name::after {
     content: "Gmail";
-  }
-  .education-link::after {
-    content: "edu";
-  }
-  .experience-link::after {
-    content: "exp";
   }
 }
 
