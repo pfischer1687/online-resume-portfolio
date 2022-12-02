@@ -79,6 +79,10 @@ a {
   opacity: 1;
 }
 
+footer {
+  padding-top: 15px;
+}
+
 /* Responsive
 ------------------------------*/
 @media screen and (min-width: 750px) {
@@ -121,7 +125,7 @@ a {
 
 /* Old footer */
 
-footer {
+/* footer {
   margin-bottom: 25px;
 }
 .contact-list {
@@ -143,4 +147,4 @@ footer {
 .text-file {
   background-color: #303030;
   padding: 15px 15px;
-}
+} */

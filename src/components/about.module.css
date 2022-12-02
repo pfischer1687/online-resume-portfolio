@@ -25,10 +25,11 @@
 
 .text-file {
   background-color: #303030;
-  padding: 15px 15px;
+  padding: 15px;
+  border-radius: 5px;
 }
 .about-me {
-  padding-bottom: 30px;
+  padding-bottom: 15px;
 }
 .about-img {
   width: 300px;
@@ -37,12 +38,12 @@
   margin-top: -15px;
 }
 
-/* Typing animation */
-.typing {
+/* Typing animations */
+.typing-cd-about {
   position: relative;
 }
-.typing::before,
-.typing::after {
+.typing-cd-about::before,
+.typing-cd-about::after {
   content: "";
   position: absolute;
   top: 0;
@@ -50,21 +51,54 @@
   bottom: 0;
   left: 0;
 }
-.typing::before {
+.typing-cd-about::before {
   background: black;
-  animation: typingAnim 0.5s steps(2) 1s forwards;
+  animation: typingCdAboutAnim 1s steps(10) 1s forwards;
 }
-.typing::after {
+.typing-cd-about::after {
   width: 15px;
   background: transparent;
-  animation: typingAnim 0.5s steps(2) 1s forwards, blinkingAnim 750ms 4;
+  animation: typingCdAboutAnim 1s steps(10) 1s forwards,
+    blinkingCdAboutAnim 750ms 4;
 }
-@keyframes typingAnim {
+@keyframes typingCdAboutAnim {
   to {
     left: 100%;
   }
 }
-@keyframes blinkingAnim {
+@keyframes blinkingCdAboutAnim {
+  50% {
+    background: white;
+  }
+}
+.typing-cat-about {
+  position: relative;
+}
+.typing-cat-about::before,
+.typing-cat-about::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.typing-cat-about::before {
+  background: black;
+  animation: typingCatAboutAnim 1s steps(13) 1s forwards;
+}
+.typing-cat-about::after {
+  width: 15px;
+  background: transparent;
+  animation: typingCatAboutAnim 1s steps(13) 1s forwards,
+    blinkingCatAboutAnim 750ms 4;
+}
+@keyframes typingCatAboutAnim {
+  to {
+    left: 100%;
+  }
+}
+@keyframes blinkingCatAboutAnim {
   50% {
     background: white;
   }
@@ -80,11 +114,9 @@
   }
   .skill-icons {
     display: grid;
-    grid-template-columns: auto auto auto auto;
-    /* width: 600px; */
+    grid-template-columns: repeat(5, auto);
     text-align: center;
-    margin-left: -27px;
-    margin-top: 15px;
+    margin-left: -21px;
   }
   .skill-icons img {
     height: 40px;
@@ -93,12 +125,14 @@
 @media screen and (max-width: 749px) {
   .skill-icons {
     display: flex;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-content: space-between;
     text-align: center;
-    margin-top: 15px;
   }
   .skill-icons img {
     height: 30px;
+  }
+  .about-img {
+    display: flex;
+    justify-content: center;
   }
 }

@@ -6,30 +6,30 @@ import Layout from "../components/layout";
 
 const AboutPage = () => {
   React.useEffect(() => {
-    const cdTerminal = document.getElementById("cd-terminal");
-    const cdTerminalAbout = document.getElementById("cd-terminal-about");
+    const catAboutTerminal = document.getElementById("cat-about-terminal");
+    const catAboutText = document.getElementById("cat-about-text");
     const aboutContent = document.getElementById("about-content");
     setTimeout(() => {
-      cdTerminal.classList.add(`${styles.show}`);
-      cdTerminalAbout.classList.add(`${styles.typing}`);
-    }, 1000);
+      catAboutTerminal.classList.add(`${styles.show}`);
+      catAboutText.classList.add(`${styles.typingCatAbout}`);
+    }, 3000);
     setTimeout(() => {
       aboutContent.classList.add(`${styles.show}`);
-    }, 4000);
+    }, 6000);
   });
 
   return (
-    <Layout>
+    <Layout footerTerminalTime={7000}>
       <div className={`${styles.contentWrap} ${styles.terminalCode}`}>
-        <h3 id="cd-terminal" className={styles.hidden}>
+        <h3>
           <span className={styles.terminalUsr}>guest@guest</span>:
           <span className={styles.terminalPath}>~</span>${" "}
-          <span id="cd-terminal-about">cd ~/about</span>
+          <span className={styles.typingCdAbout}>cd ~/about</span>
         </h3>
-        <h3 id="about-terminal" className={styles.hidden}>
+        <h3 id="cat-about-terminal" className={styles.hidden}>
           <span className={styles.terminalUsr}>guest@guest</span>:
-          <span className={styles.terminalPath}>~</span>${" "}
-          <span id="nav-terminal-ls">ls</span>
+          <span className={styles.terminalPath}>~/about</span>${" "}
+          <span id="cat-about-text">cat about.txt</span>
         </h3>
       </div>
 
@@ -40,7 +40,13 @@ const AboutPage = () => {
         <h2 className={styles.aboutMe}>About Me</h2>
         <section className={styles.aboutItem}>
           <div className={styles.aboutImg}>
-            <StaticImage src="../images/about-me.jpg" alt="Photo of me." />
+            <StaticImage
+              style={{
+                borderRadius: "5px",
+              }}
+              src="../images/about-me.jpg"
+              alt="Photo of me."
+            />
           </div>
 
           <div className={styles.aboutDetails}>
@@ -67,60 +73,37 @@ const AboutPage = () => {
             <div className={styles.skillIcons}>
               <div>
                 <StaticImage
-                  src="../images/js-logo.jpg"
+                  style={{ borderRadius: "5px" }}
+                  src="../images/js-logo.png"
                   alt="JavaScript logo"
                 />
                 <div>JavaScript</div>
               </div>
               <div>
                 <StaticImage
-                  src="../images/github-logo.png"
-                  alt="GitHub logo"
-                />
-                <div>Python</div>
-              </div>
-              <div>
-                <StaticImage
-                  src="../images/github-logo.png"
-                  alt="GitHub logo"
-                />
-                <div>C</div>
-              </div>
-
-              <div>
-                <StaticImage
-                  src="../images/github-logo.png"
-                  alt="GitHub logo"
+                  src="../images/react-logo.png"
+                  alt="React.js logo"
                 />
                 <div>React.js</div>
               </div>
               <div>
                 <StaticImage
-                  src="../images/github-logo.png"
-                  alt="GitHub logo"
+                  src="../images/python-logo.png"
+                  alt="Python logo"
                 />
-                <div>Gatsby</div>
+                <div>Python</div>
               </div>
               <div>
                 <StaticImage
-                  src="../images/github-logo.png"
-                  alt="GitHub logo"
+                  src="../images/c-logo.png"
+                  alt="The C programming language logo"
                 />
+                <div>C</div>
+              </div>
+
+              <div>
+                <StaticImage src="../images/linux-logo.png" alt="Linux logo" />
                 <div>Linux</div>
-              </div>
-              <div>
-                <StaticImage
-                  src="../images/github-logo.png"
-                  alt="GitHub logo"
-                />
-                <div>HTML</div>
-              </div>
-              <div>
-                <StaticImage
-                  src="../images/github-logo.png"
-                  alt="GitHub logo"
-                />
-                <div>CSS</div>
               </div>
             </div>
           </div>

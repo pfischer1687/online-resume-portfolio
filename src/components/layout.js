@@ -3,18 +3,20 @@ import * as styles from "./layout.module.css";
 import Header from "./header";
 import { StaticImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
+import "../components/global.css";
 
 const Layout = ({
   children,
   navTerminalTime = 0,
-  currTerminalTime = 0,
+  navLinksTime = 0,
+  footerTerminalTime = 0,
   navAnim = false,
 }) => {
   React.useEffect(() => {
     const navTerminal = document.getElementById("nav-terminal");
     const navTerminalLs = document.getElementById("nav-terminal-ls");
     const navLinks = document.getElementById("nav-links");
-    const currTerminal = document.getElementById("curr-terminal");
+    const footerTerminal = document.getElementById("footer-terminal");
     setTimeout(() => {
       navTerminal.classList.add(`${styles.show}`);
       if (navAnim) {
@@ -23,8 +25,10 @@ const Layout = ({
     }, navTerminalTime);
     setTimeout(() => {
       navLinks.classList.add(`${styles.show}`);
-      currTerminal.classList.add(`${styles.show}`);
-    }, currTerminalTime);
+    }, navLinksTime);
+    setTimeout(() => {
+      footerTerminal.classList.add(`${styles.show}`);
+    }, footerTerminalTime);
   });
 
   return (
@@ -173,14 +177,16 @@ const Layout = ({
       </nav>
 
       <main>{children}</main>
-      <h3
-        id="curr-terminal"
-        className={`${styles.contentWrap} ${styles.terminalCode} ${styles.hidden}`}
-      >
-        <span className={styles.terminalUsr}>guest@guest</span>:
-        <span className={styles.terminalPath}>~</span>${" "}
-        <span className={styles.typingInf}>&nbsp;</span>
-      </h3>
+      <footer>
+        <h3
+          id="footer-terminal"
+          className={`${styles.contentWrap} ${styles.terminalCode} ${styles.hidden}`}
+        >
+          <span className={styles.terminalUsr}>guest@guest</span>:
+          <span className={styles.terminalPath}>~</span>${" "}
+          <span className={styles.typingInf}>&nbsp;</span>
+        </h3>
+      </footer>
       {/* <!-- *****************  CONTACT INFO / SOCIAL MEDIA  ***************** --> */}
       {/* <div className={`${styles.contentWrap} ${styles.terminalCode}`}>
         <h3 id="contact">

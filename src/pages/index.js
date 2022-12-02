@@ -2,7 +2,7 @@ import * as React from "react";
 import * as styles from "../components/index.module.css";
 import { StaticImage } from "gatsby-plugin-image";
 import Seo from "../components/seo";
-import "../components/global.css";
+
 import Layout from "../components/layout";
 import { Link } from "gatsby";
 
@@ -25,7 +25,12 @@ const IndexPage = () => {
   // });
   return (
     <>
-      <Layout navTerminalTime={1000} currTerminalTime={4000} navAnim={true}>
+      <Layout
+        navTerminalTime={1000}
+        navLinksTime={4000}
+        footerTerminalTime={7000}
+        navAnim={true}
+      >
         {/* <nav className={`${styles.contentWrap} ${styles.terminalCode}`}>
         <h3 id="nav-terminal" className={styles.hidden}>
           <span className={styles.terminalUsr}>guest@guest</span>:
