@@ -4,6 +4,10 @@ import { StaticImage } from "gatsby-plugin-image";
 import Seo from "../components/seo";
 import Layout from "../components/layout";
 
+const catTerminalTime = 3000;
+const contentTime = 6000;
+const footerTime = 7000;
+
 const AboutPage = () => {
   React.useEffect(() => {
     const catAboutTerminal = document.getElementById("cat-about-terminal");
@@ -12,14 +16,14 @@ const AboutPage = () => {
     setTimeout(() => {
       catAboutTerminal.classList.add(`${styles.show}`);
       catAboutText.classList.add(`${styles.typingCatAbout}`);
-    }, 3000);
+    }, catTerminalTime);
     setTimeout(() => {
       aboutContent.classList.add(`${styles.show}`);
-    }, 6000);
+    }, contentTime);
   });
 
   return (
-    <Layout footerTerminalTime={7000}>
+    <Layout footerTerminalTime={footerTime}>
       <div className={`${styles.contentWrap} ${styles.terminalCode}`}>
         <h3>
           <span className={styles.terminalUsr}>guest@guest</span>:
@@ -39,11 +43,9 @@ const AboutPage = () => {
       >
         <h2 className={styles.aboutMe}>About Me</h2>
         <section className={styles.aboutItem}>
-          <div className={styles.aboutImg}>
+          <div>
             <StaticImage
-              style={{
-                borderRadius: "5px",
-              }}
+              className={styles.aboutImg}
               src="../images/about-me.jpg"
               alt="Photo of me."
             />

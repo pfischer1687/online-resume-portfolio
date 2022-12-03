@@ -9,18 +9,38 @@
 .terminal-usr {
   color: #8b008b;
 }
-.terminal-path {
-  color: rgb(111, 111, 255);
+.contact-links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  text-align: center;
 }
-a {
-  color: rgb(111, 111, 255);
+a,
+.terminal-path {
+  color: #6f6fff;
+}
+footer {
+  padding-top: 15px;
 }
 
-.typing {
+/* For staggering the animations */
+.hidden {
+  opacity: 0;
+  transition: all 1s;
+}
+.show {
+  opacity: 1;
+}
+
+/* Typing animations */
+.typing-ls,
+.typing-inf {
   position: relative;
 }
-.typing::before,
-.typing::after {
+.typing-ls::before,
+.typing-ls::after,
+.typing-inf::before,
+.typing-inf::after {
   content: "";
   position: absolute;
   top: 0;
@@ -28,14 +48,20 @@ a {
   bottom: 0;
   left: 0;
 }
-.typing::before {
+.typing-ls::before {
   background: black;
   animation: typingAnim 0.5s steps(2) 1s forwards;
 }
-.typing::after {
+.typing-ls::after,
+.typing-inf::after {
   width: 15px;
   background: transparent;
+}
+.typing-ls::after {
   animation: typingAnim 0.5s steps(2) 1s forwards, blinkingAnim 750ms 4;
+}
+.typing-inf::after {
+  animation: blinkingAnim 1s infinite;
 }
 @keyframes typingAnim {
   to {
@@ -48,51 +74,11 @@ a {
   }
 }
 
-.typing-inf {
-  position: relative;
-}
-.typing-inf::before,
-.typing-inf::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-.typing-inf::after {
-  width: 15px;
-  background: transparent;
-  animation: blinkingInf 1s infinite;
-}
-@keyframes blinkingInf {
-  50% {
-    background: white;
-  }
-}
-
-.hidden {
-  opacity: 0;
-  transition: all 1s;
-}
-.show {
-  opacity: 1;
-}
-
-footer {
-  padding-top: 15px;
-}
-
 /* Responsive
 ------------------------------*/
 @media screen and (min-width: 750px) {
   .contact-links {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    width: 600px;
-    text-align: center;
-    margin-left: -27px;
-    margin-top: 15px;
+    width: 550px;
   }
   .contact-links img {
     height: 40px;
@@ -108,43 +94,13 @@ footer {
   }
 }
 @media screen and (max-width: 749px) {
-  .contact-links {
-    display: flex;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    justify-content: space-between;
-    text-align: center;
-    margin-top: 15px;
-  }
   .contact-links img {
     height: 30px;
   }
   .gmail-name::after {
     content: "Gmail";
   }
+  h3 {
+    font-size: 1rem;
+  }
 }
-
-/* Old footer */
-
-/* footer {
-  margin-bottom: 25px;
-}
-.contact-list {
-  list-style-type: none;
-  padding: 0;
-}
-.contact-list a {
-  color: #f7fff7;
-  background: #0004ff;
-  text-decoration: none;
-  padding: 8px;
-  border-radius: 4px;
-  display: inline-block;
-  margin: 30px;
-}
-.contact-list a:hover {
-  background: rgba(128, 130, 255, 0.8);
-}
-.text-file {
-  background-color: #303030;
-  padding: 15px 15px;
-} */

@@ -2,9 +2,7 @@ import * as React from "react";
 import * as styles from "../components/index.module.css";
 import { StaticImage } from "gatsby-plugin-image";
 import Seo from "../components/seo";
-
 import Layout from "../components/layout";
-import { Link } from "gatsby";
 
 const IndexPage = () => {
   // React.useEffect(() => {
