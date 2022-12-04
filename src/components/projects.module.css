@@ -1,0 +1,117 @@
+.content-wrap {
+  max-width: 800px;
+  width: 85%;
+  margin: 0 auto;
+}
+.terminal-code {
+  font-family: monospace, monospace;
+}
+.terminal-usr {
+  color: #8b008b;
+}
+.terminal-path {
+  color: rgb(111, 111, 255);
+}
+.text-file {
+  background-color: #303030;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+/* Projects */
+.projects a {
+  color: #f7fff7;
+  background: #570057;
+  text-decoration: none;
+  padding: 8px;
+  border-radius: 4px;
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+}
+.projects a:hover {
+  background: #8b008b;
+}
+.projects h3 {
+  margin: 0;
+}
+.divider > section {
+  overflow: hidden;
+  border-bottom: 1px dashed #8b008b;
+  padding: 25px 0;
+}
+.divider > section:last-of-type {
+  border-bottom: none;
+}
+.projects-item img {
+  border-radius: 5px;
+}
+
+/* For staggering the animations */
+.hidden {
+  opacity: 0;
+  transition: all 1s;
+}
+.show {
+  opacity: 1;
+}
+
+/* Typing animations */
+.typing-cd-projects,
+.typing-cat-projects {
+  position: relative;
+}
+.typing-cd-projects::before,
+.typing-cd-projects::after,
+.typing-cat-projects::before,
+.typing-cat-projects::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.typing-cd-projects::before,
+.typing-cat-projects::before {
+  background: black;
+}
+.typing-cd-projects::before {
+  animation: typingAnim 1s steps(13) 1s forwards;
+}
+.typing-cat-projects::before {
+  animation: typingAnim 1s steps(16) 1s forwards;
+}
+.typing-cd-projects::after,
+.typing-cat-projects::after {
+  width: 15px;
+  background: transparent;
+}
+.typing-cd-projects::after {
+  animation: typingAnim 1s steps(13) 1s forwards, blinkingAnim 750ms 4;
+}
+.typing-cat-projects::after {
+  animation: typingAnim 1s steps(16) 1s forwards, blinkingAnim 750ms 4;
+}
+@keyframes typingAnim {
+  to {
+    left: 100%;
+  }
+}
+@keyframes blinkingAnim {
+  50% {
+    background: white;
+  }
+}
+
+/* Responsive
+  ------------------------------*/
+@media screen and (min-width: 750px) {
+  .projects-item {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    column-gap: 20px;
+  }
+}
+@media screen and (max-width: 749px) {
+}

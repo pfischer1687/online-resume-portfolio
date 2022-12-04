@@ -11,6 +11,7 @@ const Layout = ({
   navLinksTime = 0,
   footerTerminalTime = 0,
   navAnim = false,
+  pagePath = "",
 }) => {
   React.useEffect(() => {
     const navTerminal = document.getElementById("nav-terminal");
@@ -48,7 +49,8 @@ const Layout = ({
           </Link>{" "}
           <Link className={styles.experienceLink} to="/experience">
             exp
-          </Link>
+          </Link>{" "}
+          <Link to="/404">404</Link>
           <div className={styles.contactLinks}>
             <a
               href="https://github.com/pfischer1687"
@@ -115,7 +117,7 @@ const Layout = ({
           className={`${styles.contentWrap} ${styles.terminalCode} ${styles.hidden}`}
         >
           <span className={styles.terminalUsr}>guest@guest</span>:
-          <span className={styles.terminalPath}>~</span>${" "}
+          <span className={styles.terminalPath}>~{pagePath}</span>${" "}
           <span className={styles.typingInf}>&nbsp;</span>
         </h3>
       </footer>

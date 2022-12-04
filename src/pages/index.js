@@ -1,26 +1,9 @@
 import * as React from "react";
 import * as styles from "../components/index.module.css";
-import { StaticImage } from "gatsby-plugin-image";
 import Seo from "../components/seo";
 import Layout from "../components/layout";
 
 const IndexPage = () => {
-  // React.useEffect(() => {
-  //   const navTerminal = document.getElementById("nav-terminal");
-  //   const navTerminalLs = document.getElementById("nav-terminal-ls");
-  //   const navLinks = document.getElementById("nav-links");
-  //   const currTerminal = document.getElementById("curr-terminal");
-  //   setTimeout(() => {
-  //     navTerminal.classList.add(`${styles.show}`);
-  //     navTerminalLs.classList.add(`${styles.typing}`);
-  //   }, 1000);
-  //   setTimeout(() => {
-  //     navLinks.classList.add(`${styles.show}`);
-  //   }, 4000);
-  //   setTimeout(() => {
-  //     currTerminal.classList.add(`${styles.show}`);
-  //   }, 5000);
-  // });
   return (
     <>
       <Layout
@@ -29,131 +12,8 @@ const IndexPage = () => {
         footerTerminalTime={7000}
         navAnim={true}
       >
-        {/* <nav className={`${styles.contentWrap} ${styles.terminalCode}`}>
-        <h3 id="nav-terminal" className={styles.hidden}>
-          <span className={styles.terminalUsr}>guest@guest</span>:
-          <span className={styles.terminalPath}>~</span>${" "}
-          <span id="nav-terminal-ls">ls</span>
-        </h3>
-        <h3 id="nav-links" className={styles.hidden}>
-          <Link to="/about">about</Link> <a href="#projects">projects</a>{" "}
-          <a className={styles.educationLink} href="#education">
-            edu
-          </a>{" "}
-          <a className={styles.experienceLink} href="#experience">
-            exp
-          </a>
-          <div className={styles.contactLinks}>
-            <a
-              href="https://github.com/pfischer1687"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <div>
-                <StaticImage
-                  src="../images/github-logo.png"
-                  alt="GitHub logo"
-                />
-              </div>
-              <div>GitHub</div>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/paul-fischer-816042127"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <div>
-                <StaticImage
-                  src="../images/linkedin-logo.png"
-                  alt="LinkedIn logo"
-                />
-              </div>
-              <div>LinkedIn</div>
-            </a>
-            <a
-              href="https://twitter.com/PaulFis43236408"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <div>
-                <StaticImage
-                  src="../images/twitter-logo.png"
-                  alt="Twitter logo"
-                />
-              </div>
-              <div>Twitter</div>
-            </a>
-            <a
-              href="mailto:paulfischerdev@gmail.com"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <div>
-                <StaticImage
-                  src="../images/gmail-logo.png"
-                  alt="Gmail logo"
-                  style={{ filter: "invert(100%)" }}
-                />
-              </div>
-              <div className={styles.gmailName}></div>
-            </a>
-          </div>
-        </h3>
-      </nav>
-      <h3
-        id="curr-terminal"
-        className={`${styles.contentWrap} ${styles.terminalCode} ${styles.hidden}`}
-      >
-        <span className={styles.terminalUsr}>guest@guest</span>:
-        <span className={styles.terminalPath}>~</span>${" "}
-        <span className={styles.typingInf}>&nbsp;</span>
-      </h3> */}
-
-        {/* <!-- ***********************  ABOUT / PROFILE  *********************** --> */}
-        {/* <div className={`${styles.contentWrap} ${styles.terminalCode}`}>
-        <h3 id="about">
-          <span className={styles.terminalUsr}>guest@guest</span>:
-          <span className={styles.terminalPath}>~</span>$ cd about
-        </h3>
-        <h3>
-          <span className={styles.terminalUsr}>guest@guest</span>:
-          <span className={styles.terminalPath}>~/about</span>$ cat about.txt
-        </h3>
-      </div>
-
-      <section className={`${styles.textFile} ${styles.contentWrap}`}>
-        <h2 className={styles.aboutMe}>About Me</h2>
-        <section className={styles.aboutItem}>
-          <div className={styles.aboutImg}>
-            <StaticImage src="../images/about-me.jpg" alt="Photo of me." />
-          </div>
-
-          <div className={styles.aboutDetails}>
-            <p>
-              Hi! I'm Paul. I love to code everything from websites to
-              computational physics simulations, financial data science,
-              embedded systems in arduino, and more!
-            </p>
-            <p>
-              After graduating with a B.S. in Physics with a minor in Applied
-              Mathematics, I taught high school Physics and AP Physics. I
-              enjoyed sharing my knowledge but wanted to return to do more
-              research. During my M.S. in Computational Physics, I really
-              developed my love of coding. My research involved working with
-              Markov chain Monte Carlo simulations in the C programming language
-              distributed among several nodes of a High Performance Cluster
-              (HPC) in parallel via Open MPI on Red Hat Enterprise Linux. The
-              analysis of my data was done in Python and utilized the libraries
-              pandas, NumPy, SciPy, SymPy, and Matplotlib. My love f coding for
-              my research drew me to my current career goals in software
-              engineering.
-            </p>
-          </div>
-        </section>
-      </section> */}
-
         {/* <!-- ********************  PROJECTS / PORTFOLIO  ********************* --> */}
-        <div className={`${styles.contentWrap} ${styles.terminalCode}`}>
+        {/* <div className={`${styles.contentWrap} ${styles.terminalCode}`}>
           <h3 id="projects">
             <span className={styles.terminalUsr}>guest@guest</span>:
             <span className={styles.terminalPath}>~/about</span>$ cd ~/projects
@@ -172,10 +32,10 @@ const IndexPage = () => {
           <p>
             View selected projects and publications below. More details for each
             project can be found by clicking the "View project" link.
-          </p>
+          </p> */}
 
-          {/* <!-- Project 1 --> */}
-          <section className={styles.projectsItem}>
+        {/* <!-- Project 1 --> */}
+        {/* <section className={styles.projectsItem}>
             <div className={styles.projectsImg}>
               <StaticImage
                 src="../images/realistic-fractional.png"
@@ -196,15 +56,15 @@ const IndexPage = () => {
                 Skills: C, MPI, Python, Pandas, Matplotlib, NumPy, SciPy, SymPy,
                 Jupyter Notebook, LaTeX, Visual Studio Code, Makefile, Linux
                 Command Line, Probability/Statistics.
-              </p>
-              {/* <!-- wait for ProQuest to publish
+              </p> */}
+        {/* <!-- wait for ProQuest to publish
             <a href="#" target="_blank" rel="noreferrer">View project / case study</a>
             --> */}
-            </div>
-          </section>
+        {/* </div>
+          </section> */}
 
-          {/* <!-- Project 2 --> */}
-          <section className={styles.projectsItem}>
+        {/* <!-- Project 2 --> */}
+        {/* <section className={styles.projectsItem}>
             <div className={styles.projectsImg}>
               <StaticImage
                 src="../images/rules-generating.png"
@@ -230,10 +90,10 @@ const IndexPage = () => {
                 View project
               </a>
             </div>
-          </section>
+          </section> */}
 
-          {/* <!-- Project 3 --> */}
-          <section className={styles.projectsItem}>
+        {/* <!-- Project 3 --> */}
+        {/* <section className={styles.projectsItem}>
             <div className={styles.projectsImg}>
               <StaticImage
                 src="../images/using-dodd.png"
@@ -263,10 +123,10 @@ const IndexPage = () => {
                 View project
               </a>
             </div>
-          </section>
+          </section> */}
 
-          {/* <!-- Project 4 --> */}
-          <section className={styles.projectsItem}>
+        {/* <!-- Project 4 --> */}
+        {/* <section className={styles.projectsItem}>
             <div className={styles.projectsImg}>
               <StaticImage
                 src="../images/an-objective.png"
@@ -293,9 +153,9 @@ const IndexPage = () => {
                 View project
               </a>
             </div>
-          </section>
-          {/* <!-- End of Project block. --> */}
-        </section>
+          </section> */}
+        {/* <!-- End of Project block. --> */}
+        {/* </section> */}
 
         {/* <!-- ******************  EDUCATION & CERTIFICATIONS ****************** --> */}
         <div className={`${styles.contentWrap} ${styles.terminalCode}`}>
