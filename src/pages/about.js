@@ -4,6 +4,30 @@ import { StaticImage } from "gatsby-plugin-image";
 import Seo from "../components/seo";
 import Layout from "../components/layout";
 
+// const TYPING_ANIMATION = (
+//   navTerminalTime = 0,
+//   navLinksTime = 0,
+//   footerTerminalTime = 0,
+//   navAnim = false
+// ) => {
+//   const navTerminal = document.getElementById("nav-terminal");
+//   const navTerminalLs = document.getElementById("nav-terminal-ls");
+//   const navLinks = document.getElementById("nav-links");
+//   const footerTerminal = document.getElementById("footer-terminal");
+//   setTimeout(() => {
+//     navTerminal.classList.add(`${styles.show}`);
+//     if (navAnim) {
+//       navTerminalLs.classList.add(`${styles.typingLs}`);
+//     }
+//   }, navTerminalTime);
+//   setTimeout(() => {
+//     navLinks.classList.add(`${styles.show}`);
+//   }, navLinksTime);
+//   setTimeout(() => {
+//     footerTerminal.classList.add(`${styles.show}`);
+//   }, footerTerminalTime);
+// };
+
 const catTerminalTime = 3000;
 const contentTime = 6000;
 const footerTime = 7000;
@@ -14,7 +38,7 @@ const AboutPage = () => {
     const catAboutText = document.getElementById("cat-about-text");
     const aboutContent = document.getElementById("about-content");
     setTimeout(() => {
-      catAboutTerminal.classList.add(`${styles.show}`);
+      catAboutTerminal.classList.add("show");
       catAboutText.classList.add(`${styles.typingCatAbout}`);
     }, catTerminalTime);
     setTimeout(() => {
@@ -28,7 +52,7 @@ const AboutPage = () => {
         <h3>
           <span className={styles.terminalUsr}>guest@guest</span>:
           <span className={styles.terminalPath}>~</span>${" "}
-          <span className={styles.typingCdAbout}>cd ~/about</span>
+          <span className={`typing-cd-about ${styles.test}`}>cd ~/about</span>
         </h3>
         <h3 id="cat-about-terminal" className={styles.hidden}>
           <span className={styles.terminalUsr}>guest@guest</span>:
@@ -71,6 +95,7 @@ const AboutPage = () => {
               my research drew me to my current career goals in software
               engineering.
             </p>
+
             <h3>Top Skills:</h3>
             <div className={styles.skillIcons}>
               <div>
@@ -102,7 +127,6 @@ const AboutPage = () => {
                 />
                 <div>C</div>
               </div>
-
               <div>
                 <StaticImage src="../images/linux-logo.png" alt="Linux logo" />
                 <div>Linux</div>

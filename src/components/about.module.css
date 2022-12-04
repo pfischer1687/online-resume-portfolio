@@ -1,22 +1,3 @@
-.content-wrap {
-  max-width: 800px;
-  width: 85%;
-  margin: 0 auto;
-}
-.terminal-code {
-  font-family: monospace, monospace;
-}
-.terminal-usr {
-  color: #8b008b;
-}
-.terminal-path {
-  color: rgb(111, 111, 255);
-}
-.text-file {
-  background-color: #303030;
-  padding: 15px;
-  border-radius: 5px;
-}
 .about-me {
   padding-bottom: 10px;
 }
@@ -24,62 +5,8 @@
   width: 300px;
   border-radius: 5px;
 }
-
-/* For staggering the animations */
-.hidden {
-  opacity: 0;
-  transition: all 1s;
-}
-.show {
-  opacity: 1;
-}
-
-/* Typing animations */
-.typing-cd-about,
-.typing-cat-about {
-  position: relative;
-}
-.typing-cd-about::before,
-.typing-cd-about::after,
-.typing-cat-about::before,
-.typing-cat-about::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-.typing-cd-about::before,
-.typing-cat-about::before {
-  background: black;
-}
-.typing-cd-about::before {
-  animation: typingAnim 1s steps(10) 1s forwards;
-}
-.typing-cat-about::before {
-  animation: typingAnim 1s steps(13) 1s forwards;
-}
-.typing-cd-about::after,
-.typing-cat-about::after {
-  width: 15px;
-  background: transparent;
-}
-.typing-cd-about::after {
-  animation: typingAnim 1s steps(10) 1s forwards, blinkingAnim 750ms 4;
-}
-.typing-cat-about::after {
-  animation: typingAnim 1s steps(13) 1s forwards, blinkingAnim 750ms 4;
-}
-@keyframes typingAnim {
-  to {
-    left: 100%;
-  }
-}
-@keyframes blinkingAnim {
-  50% {
-    background: white;
-  }
+.test {
+  --test-var: 10;
 }
 
 /* Responsive

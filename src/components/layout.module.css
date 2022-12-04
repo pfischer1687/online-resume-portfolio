@@ -1,77 +1,24 @@
-.content-wrap {
-  max-width: 800px;
-  width: 85%;
-  margin: 0 auto;
-}
-.terminal-code {
-  font-family: monospace, monospace;
-}
-.terminal-usr {
-  color: #8b008b;
-}
 .contact-links {
   display: flex;
   justify-content: space-between;
   margin-top: 15px;
   text-align: center;
 }
-a,
-.terminal-path {
+a {
   color: #6f6fff;
 }
 footer {
   padding-top: 15px;
 }
 
-/* For staggering the animations */
-.hidden {
-  opacity: 0;
-  transition: all 1s;
-}
-.show {
-  opacity: 1;
-}
-
 /* Typing animations */
-.typing-ls,
-.typing-inf {
-  position: relative;
+.typing-ls {
+  --num-letters: 2;
+  --blink-time: 4;
 }
-.typing-ls::before,
-.typing-ls::after,
-.typing-inf::before,
-.typing-inf::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-.typing-ls::before {
-  background: black;
-  animation: typingAnim 0.5s steps(2) 1s forwards;
-}
-.typing-ls::after,
-.typing-inf::after {
-  width: 15px;
-  background: transparent;
-}
-.typing-ls::after {
-  animation: typingAnim 0.5s steps(2) 1s forwards, blinkingAnim 750ms 4;
-}
-.typing-inf::after {
-  animation: blinkingAnim 1s infinite;
-}
-@keyframes typingAnim {
-  to {
-    left: 100%;
-  }
-}
-@keyframes blinkingAnim {
-  50% {
-    background: white;
-  }
+.typing-footer {
+  --num-letters: 1;
+  --blink-time: infinite;
 }
 
 /* Responsive

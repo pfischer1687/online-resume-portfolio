@@ -3,32 +3,42 @@ import * as styles from "./layout.module.css";
 import Header from "./header";
 import { StaticImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
-import "../components/global.css";
+import "./global.css";
 
 const Layout = ({
   children,
-  navTerminalTime = 0,
-  navLinksTime = 0,
-  footerTerminalTime = 0,
+  footerTerminalTime = 7000,
   navAnim = false,
   pagePath = "",
 }) => {
   React.useEffect(() => {
-    const navTerminal = document.getElementById("nav-terminal");
-    const navTerminalLs = document.getElementById("nav-terminal-ls");
-    const navLinks = document.getElementById("nav-links");
+    // Nav menu typing animation
+    if (navAnim) {
+      const navTerminalTime = 1000;
+      const navLinksTime = 4000;
+
+      const navTerminal = document.getElementById("nav-terminal");
+      const navTerminalLs = document.getElementById("nav-terminal-ls");
+      const navLinks = document.getElementById("nav-links");
+
+      setTimeout(() => {
+        navTerminal.classList.add("show");
+        if (navAnim) {
+          // navTerminalLs.classList.add(`${styles.typingLs}`);
+          navTerminalLs.classList.add("typing");
+        }
+      }, navTerminalTime);
+      setTimeout(() => {
+        // navLinks.classList.add(`${styles.show}`);
+        navLinks.classList.add("show");
+      }, navLinksTime);
+    }
+
+    // footer typing animation
     const footerTerminal = document.getElementById("footer-terminal");
     setTimeout(() => {
-      navTerminal.classList.add(`${styles.show}`);
-      if (navAnim) {
-        navTerminalLs.classList.add(`${styles.typingLs}`);
-      }
-    }, navTerminalTime);
-    setTimeout(() => {
-      navLinks.classList.add(`${styles.show}`);
-    }, navLinksTime);
-    setTimeout(() => {
-      footerTerminal.classList.add(`${styles.show}`);
+      // footerTerminal.classList.add(`${styles.show}`);
+      footerTerminal.classList.add("show");
     }, footerTerminalTime);
   });
 
@@ -36,13 +46,19 @@ const Layout = ({
     <>
       <Header />
 
-      <nav className={`${styles.contentWrap} ${styles.terminalCode}`}>
-        <h3 id="nav-terminal" className={styles.hidden}>
-          <span className={styles.terminalUsr}>guest@guest</span>:
-          <span className={styles.terminalPath}>~</span>${" "}
-          <span id="nav-terminal-ls">ls</span>
+      {/* <nav className={`${styles.contentWrap} ${styles.terminalCode}`}> */}
+      <nav className="content-wrap terminal-code">
+        {/* <h3 id="nav-terminal" className={navAnim ? styles.hidden : null}> */}
+        <h3 id="nav-terminal" className={navAnim ? "hidden" : null}>
+          {/* <span className={styles.terminalUsr}>guest@guest</span>: */}
+          <span className="terminal-usr">guest@guest</span>:
+          {/* <span className={styles.terminalPath}>~</span>${" "} */}
+          <span className="terminal-path">~</span>${" "}
+          <span id="nav-terminal-ls" className={styles.typingLs}>
+            ls
+          </span>
         </h3>
-        <h3 id="nav-links" className={styles.hidden}>
+        <h3 id="nav-links" className={navAnim ? "hidden" : null}>
           <Link to="/about">about</Link> <Link to="/projects">projects</Link>{" "}
           <Link className={styles.educationLink} to="/education">
             edu
@@ -112,13 +128,10 @@ const Layout = ({
       <main>{children}</main>
 
       <footer>
-        <h3
-          id="footer-terminal"
-          className={`${styles.contentWrap} ${styles.terminalCode} ${styles.hidden}`}
-        >
-          <span className={styles.terminalUsr}>guest@guest</span>:
-          <span className={styles.terminalPath}>~{pagePath}</span>${" "}
-          <span className={styles.typingInf}>&nbsp;</span>
+        <h3 id="footer-terminal" className="content-wrap terminal-code hidden">
+          <span className="terminal-usr">guest@guest</span>:
+          <span className="terminal-path">~{pagePath}</span>$
+          <span className={`typing ${styles.typingFooter}`}>&nbsp;</span>
         </h3>
       </footer>
     </>

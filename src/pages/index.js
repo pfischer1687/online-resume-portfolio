@@ -6,12 +6,7 @@ import Layout from "../components/layout";
 const IndexPage = () => {
   return (
     <>
-      <Layout
-        navTerminalTime={1000}
-        navLinksTime={4000}
-        footerTerminalTime={7000}
-        navAnim={true}
-      >
+      <Layout navAnim={true}>
         {/* <!-- ********************  PROJECTS / PORTFOLIO  ********************* --> */}
         {/* <div className={`${styles.contentWrap} ${styles.terminalCode}`}>
           <h3 id="projects">
