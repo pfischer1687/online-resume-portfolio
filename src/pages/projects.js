@@ -3,45 +3,33 @@ import * as styles from "../components/projects.module.css";
 import { StaticImage } from "gatsby-plugin-image";
 import Seo from "../components/seo";
 import Layout from "../components/layout";
-
-const catTerminalTime = 3000;
-const contentTime = 6000;
-const footerTime = 7000;
+import TypingAnimation from "../components/typingAnimation";
 
 const ProjectsPage = () => {
   React.useEffect(() => {
-    const catProjectsTerminal = document.getElementById(
-      "cat-projects-terminal"
-    );
-    const catProjectsText = document.getElementById("cat-projects-text");
-    const projectsContent = document.getElementById("projects-content");
-    setTimeout(() => {
-      catProjectsTerminal.classList.add(`${styles.show}`);
-      catProjectsText.classList.add(`${styles.typingCatProjects}`);
-    }, catTerminalTime);
-    setTimeout(() => {
-      projectsContent.classList.add(`${styles.show}`);
-    }, contentTime);
+    TypingAnimation();
   });
 
   return (
-    <Layout footerTerminalTime={footerTime} pagePath="/projects">
-      <div className={`${styles.contentWrap} ${styles.terminalCode}`}>
+    <Layout pagePath="/projects">
+      <div className="content-wrap terminal-code">
         <h3>
-          <span className={styles.terminalUsr}>guest@guest</span>:
-          <span className={styles.terminalPath}>~</span>${" "}
-          <span className={styles.typingCdProjects}>cd ~/projects</span>
+          <span className="terminal-usr">guest@guest</span>:
+          <span className="terminal-path">~</span>${" "}
+          <span className={`typing ${styles.typingCd}`}>cd ~/projects</span>
         </h3>
-        <h3 id="cat-projects-terminal" className={styles.hidden}>
-          <span className={styles.terminalUsr}>guest@guest</span>:
-          <span className={styles.terminalPath}>~/projects</span>${" "}
-          <span id="cat-projects-text">cat projects.txt</span>
+        <h3 id="cat-terminal" className="hidden">
+          <span className="terminal-usr">guest@guest</span>:
+          <span className="terminal-path">~/projects</span>${" "}
+          <span id="cat-text" className={styles.typingCat}>
+            cat projects.txt
+          </span>
         </h3>
       </div>
 
       <section
-        id="projects-content"
-        className={`${styles.textFile} ${styles.contentWrap} ${styles.projects} ${styles.divider} ${styles.hidden}`}
+        id="content"
+        className={`text-file content-wrap ${styles.projects} ${styles.divider} hidden`}
       >
         <h2>Featured Projects and Publications</h2>
         <p>
@@ -99,9 +87,9 @@ const ProjectsPage = () => {
               Notebook, LaTeX, Visual Studio Code, Makefile, Linux Command Line,
               Probability/Statistics.
             </p>
-            <a href="#" target="_blank" rel="noreferrer">
+            {/* <a href="#" target="_blank" rel="noreferrer">
               View project
-            </a>
+            </a> */}
           </div>
         </section>
 
@@ -226,81 +214,6 @@ const ProjectsPage = () => {
         </section> */}
         {/* <!-- End of Project block. --> */}
       </section>
-
-      {/* <section
-        id="about-content"
-        className={`${styles.textFile} ${styles.contentWrap} ${styles.hidden}`}
-      >
-        <h2 className={styles.aboutMe}>About Me</h2>
-        <section className={styles.aboutItem}>
-          <div>
-            <StaticImage
-              className={styles.aboutImg}
-              src="../images/about-me.jpg"
-              alt="Photo of me."
-            />
-          </div>
-
-          <div className={styles.aboutDetails}>
-            <p>
-              Hi! I'm Paul. I love to code everything from websites to
-              computational physics simulations, financial data science,
-              embedded systems in arduino, and more!
-            </p>
-            <p>
-              After graduating with a B.S. in Physics with a minor in Applied
-              Mathematics, I taught high school Physics and AP Physics. I
-              enjoyed sharing my knowledge but wanted to return to do more
-              research. During my M.S. in Computational Physics, I really
-              developed my love of coding. My research involved working with
-              Markov chain Monte Carlo simulations in the C programming language
-              distributed among several nodes of a High Performance Cluster
-              (HPC) in parallel via Open MPI on Red Hat Enterprise Linux. The
-              analysis of my data was done in Python and utilized the libraries
-              pandas, NumPy, SciPy, SymPy, and Matplotlib. My love f coding for
-              my research drew me to my current career goals in software
-              engineering.
-            </p>
-            <h3>Top Skills:</h3>
-            <div className={styles.skillIcons}>
-              <div>
-                <StaticImage
-                  style={{ borderRadius: "5px" }}
-                  src="../images/js-logo.png"
-                  alt="JavaScript logo"
-                />
-                <div>JavaScript</div>
-              </div>
-              <div>
-                <StaticImage
-                  src="../images/react-logo.png"
-                  alt="React.js logo"
-                />
-                <div>React.js</div>
-              </div>
-              <div>
-                <StaticImage
-                  src="../images/python-logo.png"
-                  alt="Python logo"
-                />
-                <div>Python</div>
-              </div>
-              <div>
-                <StaticImage
-                  src="../images/c-logo.png"
-                  alt="The C programming language logo"
-                />
-                <div>C</div>
-              </div>
-
-              <div>
-                <StaticImage src="../images/linux-logo.png" alt="Linux logo" />
-                <div>Linux</div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </section> */}
     </Layout>
   );
 };

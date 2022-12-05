@@ -5,6 +5,8 @@
   width: 300px;
   border-radius: 5px;
 }
+
+/* For typing animation */
 .typing-cd {
   --num-letters: 10;
   --blink-time: 4;
