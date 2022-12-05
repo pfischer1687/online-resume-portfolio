@@ -9,11 +9,9 @@
 /* For typing animation */
 .typing-cd {
   --num-letters: 10;
-  --blink-time: 4;
 }
 .typing-cat {
   --num-letters: 13;
-  --blink-time: 4;
 }
 
 /* Responsive

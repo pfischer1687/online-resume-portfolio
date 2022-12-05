@@ -29,11 +29,9 @@
 /* For typing animation */
 .typing-cd {
   --num-letters: 13;
-  --blink-time: 4;
 }
 .typing-cat {
   --num-letters: 16;
-  --blink-time: 4;
 }
 
 /* Responsive

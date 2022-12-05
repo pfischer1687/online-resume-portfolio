@@ -10,6 +10,9 @@ COLOR PALETTE
 
 /* Global syles
 ------------------------------*/
+:root {
+  --blink-count: 4; /* For typing animation */
+}
 html {
   box-sizing: border-box;
 }
@@ -49,7 +52,7 @@ body {
   border-radius: 5px;
 }
 
-/* For staggering the animations */
+/* For staggering the typing animations */
 .hidden {
   opacity: 0;
   transition: all 1s;
@@ -75,15 +78,15 @@ body {
   background: black;
 }
 .typing::before {
-  animation: typingAnim 1s steps(var(--num-letters)) 1s forwards;
+  animation: typingAnim 0.5s steps(var(--num-letters)) 1s forwards;
 }
 .typing::after {
   width: 15px;
   background: transparent;
 }
 .typing::after {
-  animation: typingAnim 1s steps(var(--num-letters)) 1s forwards,
-    blinkingAnim 750ms var(--blink-time);
+  animation: typingAnim 0.5s steps(var(--num-letters)) 1s forwards,
+    blinkingAnim 750ms var(--blink-count);
 }
 @keyframes typingAnim {
   to {

@@ -3,7 +3,7 @@ import * as styles from "../components/projects.module.css";
 import { StaticImage } from "gatsby-plugin-image";
 import Seo from "../components/seo";
 import Layout from "../components/layout";
-import TypingAnimation from "../components/typingAnimation";
+import TypingAnimation from "../components/typing-animation";
 
 const ProjectsPage = () => {
   React.useEffect(() => {

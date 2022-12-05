@@ -14,18 +14,20 @@ footer {
 /* Typing animations */
 .typing-ls {
   --num-letters: 2;
-  --blink-time: 4;
 }
 .typing-footer {
   --num-letters: 1;
-  --blink-time: infinite;
+  --blink-count: infinite;
 }
 
 /* Responsive
 ------------------------------*/
 @media screen and (min-width: 750px) {
+  h3 {
+    line-height: 40px;
+  }
   .contact-links {
-    width: 550px;
+    max-width: 550px;
   }
   .contact-links img {
     height: 40px;
@@ -33,21 +35,25 @@ footer {
   .gmail-name::after {
     content: "paulfischerdev@gmail.com";
   }
-  .education-link::after {
-    content: "cation";
-  }
-  .experience-link::after {
-    content: "erience";
+  .nav-links a {
+    padding-right: 20px;
   }
 }
 @media screen and (max-width: 749px) {
+  h3 {
+    font-size: 1rem;
+    line-height: 30px;
+  }
+  .contact-links {
+    max-width: 375px;
+  }
   .contact-links img {
     height: 30px;
   }
   .gmail-name::after {
     content: "Gmail";
   }
-  h3 {
-    font-size: 1rem;
+  .nav-links a {
+    padding-right: 15px;
   }
 }

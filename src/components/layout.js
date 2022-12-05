@@ -52,14 +52,6 @@ const Layout = ({
           </span>
         </h3>
         <h3 id="nav-links" className={navAnim ? "hidden" : null}>
-          <Link to="/about">about</Link> <Link to="/projects">projects</Link>{" "}
-          <Link className={styles.educationLink} to="/education">
-            edu
-          </Link>{" "}
-          <Link className={styles.experienceLink} to="/experience">
-            exp
-          </Link>{" "}
-          <Link to="/404">404</Link>
           <div className={styles.contactLinks}>
             <a
               href="https://github.com/pfischer1687"
@@ -114,6 +106,11 @@ const Layout = ({
               </div>
               <div className={styles.gmailName}></div>
             </a>
+          </div>
+          <div className={styles.navLinks}>
+            <Link to="/about">about</Link> <Link to="/projects">projects</Link>{" "}
+            <Link to="/education">education</Link>{" "}
+            <Link to="/experience">experience</Link> <Link to="/404">404</Link>
           </div>
         </h3>
       </nav>
