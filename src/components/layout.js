@@ -24,12 +24,10 @@ const Layout = ({
       setTimeout(() => {
         navTerminal.classList.add("show");
         if (navAnim) {
-          // navTerminalLs.classList.add(`${styles.typingLs}`);
           navTerminalLs.classList.add("typing");
         }
       }, navTerminalTime);
       setTimeout(() => {
-        // navLinks.classList.add(`${styles.show}`);
         navLinks.classList.add("show");
       }, navLinksTime);
     }
@@ -37,7 +35,6 @@ const Layout = ({
     // footer typing animation
     const footerTerminal = document.getElementById("footer-terminal");
     setTimeout(() => {
-      // footerTerminal.classList.add(`${styles.show}`);
       footerTerminal.classList.add("show");
     }, footerTerminalTime);
   });
@@ -46,13 +43,9 @@ const Layout = ({
     <>
       <Header />
 
-      {/* <nav className={`${styles.contentWrap} ${styles.terminalCode}`}> */}
       <nav className="content-wrap terminal-code">
-        {/* <h3 id="nav-terminal" className={navAnim ? styles.hidden : null}> */}
         <h3 id="nav-terminal" className={navAnim ? "hidden" : null}>
-          {/* <span className={styles.terminalUsr}>guest@guest</span>: */}
           <span className="terminal-usr">guest@guest</span>:
-          {/* <span className={styles.terminalPath}>~</span>${" "} */}
           <span className="terminal-path">~</span>${" "}
           <span id="nav-terminal-ls" className={styles.typingLs}>
             ls

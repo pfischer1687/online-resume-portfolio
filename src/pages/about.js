@@ -3,68 +3,31 @@ import * as styles from "../components/about.module.css";
 import { StaticImage } from "gatsby-plugin-image";
 import Seo from "../components/seo";
 import Layout from "../components/layout";
-
-// const TYPING_ANIMATION = (
-//   navTerminalTime = 0,
-//   navLinksTime = 0,
-//   footerTerminalTime = 0,
-//   navAnim = false
-// ) => {
-//   const navTerminal = document.getElementById("nav-terminal");
-//   const navTerminalLs = document.getElementById("nav-terminal-ls");
-//   const navLinks = document.getElementById("nav-links");
-//   const footerTerminal = document.getElementById("footer-terminal");
-//   setTimeout(() => {
-//     navTerminal.classList.add(`${styles.show}`);
-//     if (navAnim) {
-//       navTerminalLs.classList.add(`${styles.typingLs}`);
-//     }
-//   }, navTerminalTime);
-//   setTimeout(() => {
-//     navLinks.classList.add(`${styles.show}`);
-//   }, navLinksTime);
-//   setTimeout(() => {
-//     footerTerminal.classList.add(`${styles.show}`);
-//   }, footerTerminalTime);
-// };
-
-const catTerminalTime = 3000;
-const contentTime = 6000;
-const footerTime = 7000;
+import TypingAnimation from "../components/typingAnimation";
 
 const AboutPage = () => {
   React.useEffect(() => {
-    const catAboutTerminal = document.getElementById("cat-about-terminal");
-    const catAboutText = document.getElementById("cat-about-text");
-    const aboutContent = document.getElementById("about-content");
-    setTimeout(() => {
-      catAboutTerminal.classList.add("show");
-      catAboutText.classList.add(`${styles.typingCatAbout}`);
-    }, catTerminalTime);
-    setTimeout(() => {
-      aboutContent.classList.add(`${styles.show}`);
-    }, contentTime);
+    TypingAnimation();
   });
 
   return (
-    <Layout footerTerminalTime={footerTime} pagePath="/about">
-      <div className={`${styles.contentWrap} ${styles.terminalCode}`}>
+    <Layout pagePath="/about">
+      <div className="content-wrap terminal-code">
         <h3>
-          <span className={styles.terminalUsr}>guest@guest</span>:
-          <span className={styles.terminalPath}>~</span>${" "}
-          <span className={`typing-cd-about ${styles.test}`}>cd ~/about</span>
+          <span className={"terminal-usr"}>guest@guest</span>:
+          <span className={"terminal-path"}>~</span>${" "}
+          <span className={`typing ${styles.typingCd}`}>cd ~/about</span>
         </h3>
-        <h3 id="cat-about-terminal" className={styles.hidden}>
-          <span className={styles.terminalUsr}>guest@guest</span>:
-          <span className={styles.terminalPath}>~/about</span>${" "}
-          <span id="cat-about-text">cat about.txt</span>
+        <h3 id="cat-terminal" className="hidden">
+          <span className="terminal-usr">guest@guest</span>:
+          <span className="terminal-path">~/about</span>${" "}
+          <span id="cat-text" className={styles.typingCat}>
+            cat about.txt
+          </span>
         </h3>
       </div>
 
-      <section
-        id="about-content"
-        className={`${styles.textFile} ${styles.contentWrap} ${styles.hidden}`}
-      >
+      <section id="content" className="text-file content-wrap hidden">
         <h2 className={styles.aboutMe}>About Me</h2>
         <section className={styles.aboutItem}>
           <div>

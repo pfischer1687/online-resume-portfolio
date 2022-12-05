@@ -5,8 +5,13 @@
   width: 300px;
   border-radius: 5px;
 }
-.test {
-  --test-var: 10;
+.typing-cd {
+  --num-letters: 10;
+  --blink-time: 4;
+}
+.typing-cat {
+  --num-letters: 13;
+  --blink-time: 4;
 }
 
 /* Responsive
