@@ -6,6 +6,7 @@ import Layout from "../components/layout";
 import TypingAnimation from "../components/typing-animation";
 
 const ProjectsPage = () => {
+  const pageTitle = "projects";
   React.useEffect(() => {
     TypingAnimation();
   });
@@ -16,21 +17,21 @@ const ProjectsPage = () => {
         <h3>
           <span className="terminal-usr">guest@guest</span>:
           <span className="terminal-path">~</span>${" "}
-          <span className={`typing ${styles.typingCd}`}>cd ~/projects</span>
+          <span className={`typing ${styles.typingCd}`}>cd ~/{pageTitle}</span>
         </h3>
         <h3 id="cat-terminal" className="hidden">
           <span className="terminal-usr">guest@guest</span>:
-          <span className="terminal-path">~/projects</span>${" "}
-          <span className={styles.typingCatLineBreak}></span>
+          <span className="terminal-path">~/{pageTitle}</span>${" "}
+          <span className="typing-cat-line-break"></span>
           <span id="cat-text" className={styles.typingCat}>
-            cat projects.txt
+            cat {pageTitle}.txt
           </span>
         </h3>
       </div>
 
       <section
         id="content"
-        className={`text-file content-wrap ${styles.projects} ${styles.divider} hidden`}
+        className={`text-file content-wrap ${styles.projects} divider hidden`}
       >
         <h2>Featured Projects and Publications</h2>
         <p>

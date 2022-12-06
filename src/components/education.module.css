@@ -1,0 +1,18 @@
+.education h3,
+.education p {
+  margin: 0;
+}
+.education h3 + p {
+  font-style: italic;
+}
+.education p {
+  width: 85%;
+}
+
+/* For typing animation */
+.typing-cd {
+  --num-letters: 14;
+}
+.typing-cat {
+  --num-letters: 17;
+}

@@ -51,6 +51,14 @@ body {
   padding: 15px;
   border-radius: 5px;
 }
+.divider > section {
+  overflow: hidden;
+  border-bottom: 1px dashed #8b008b;
+  padding: 25px 0;
+}
+.divider > section:last-of-type {
+  border-bottom: none;
+}
 
 /* For staggering the typing animations */
 .hidden {
@@ -96,5 +104,14 @@ body {
 @keyframes blinkingAnim {
   50% {
     background: white;
+  }
+}
+
+/* Responsive
+  ------------------------------*/
+@media screen and (max-width: 749px) {
+  .typing-cat-line-break::after {
+    content: "\A";
+    white-space: pre;
   }
 }

@@ -14,14 +14,6 @@
 .projects h3 {
   margin: 0;
 }
-.divider > section {
-  overflow: hidden;
-  border-bottom: 1px dashed #8b008b;
-  padding: 25px 0;
-}
-.divider > section:last-of-type {
-  border-bottom: none;
-}
 .projects-item img {
   border-radius: 5px;
 }
@@ -44,10 +36,6 @@
   }
 }
 @media screen and (max-width: 749px) {
-  .typing-cat-line-break::after {
-    content: "\A";
-    white-space: pre;
-  }
   .projects-item img {
     display: block;
     margin-left: auto;
