@@ -117,7 +117,7 @@ const Layout = ({
 
       <main>{children}</main>
 
-      <footer>
+      <footer className={navAnim ? null : styles.pageFooter}>
         <h3 id="footer-terminal" className="content-wrap terminal-code hidden">
           <span className="terminal-usr">guest@guest</span>:
           <span className="terminal-path">~{pagePath}</span>$

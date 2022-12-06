@@ -3,10 +3,10 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    title: `Paul Fischer`,
+    description: `Paul Fischer's online resume portfolio.`,
+    author: `@PaulFis43236408`,
+    siteUrl: `https://paulfischer.dev/`,
   },
   plugins: [
     `gatsby-plugin-image`,
@@ -23,13 +23,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `GatsbyJS`,
-        short_name: `GatsbyJS`,
+        name: `Paul Fischer`,
+        short_name: `Paul Fischer`,
         start_url: `/`,
-        background_color: `#f7f0eb`,
-        theme_color: `#a2466c`,
+        background_color: `#000000`,
+        theme_color: `#8b008b`,
         display: `standalone`,
-        icon: `static/favicon.png`,
+        icon: `src/images/favicon.png`,
       },
     },
   ],

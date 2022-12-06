@@ -37,7 +37,6 @@ const AboutPage = () => {
               alt="Photo of me."
             />
           </div>
-
           <div className={styles.aboutDetails}>
             <p>
               Hi! I'm Paul. I love to code everything from websites to

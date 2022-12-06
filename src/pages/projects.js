@@ -132,7 +132,7 @@ const ProjectsPage = () => {
             />
           </div>
 
-          <div className={styles.projectsDetails}>
+          <div>
             <h3>
               Using Dodd-Frank Act Stress Test data to predict percentage growth
               ofMicrosoft Corporation stock price through 2023 Q1

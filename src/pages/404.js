@@ -1,5 +1,5 @@
 import * as React from "react";
-import * as styles from "../components/experience.module.css";
+import * as styles from "../components/about.module.css";
 import Seo from "../components/seo";
 import Layout from "../components/layout";
 import TypingAnimation from "../components/typing-animation";
@@ -28,35 +28,39 @@ const NotFoundPage = () => {
         </h3>
       </div>
 
-      <section id="content" className="content-wrap hidden">
-        <h2>404: Page Not Found</h2>
-        <p>
-          Sorry, we couldn’t find what you were looking for. Please enjoy this
-          picture of a cute dog and then click any of the navigation links above
-          or footer links below to navigate through the site.
-        </p>
-        <StaticImage
-          alt="Cute gray dog lying in a driveway with its tongue sticking out"
-          src="../images/dog-pic.jpg"
-        />
-        <p>
-          Photo by{" "}
-          <a
-            href="https://unsplash.com/@mutedtone?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Christopher Ayme
-          </a>{" "}
-          on{" "}
-          <a
-            href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Unsplash
-          </a>
-        </p>
+      <section id="content" className="content-wrap hidden text-file ">
+        <h2 className={styles.aboutMe}>404: Page Not Found</h2>
+        <section className={styles.aboutItem}>
+          <StaticImage
+            className={styles.aboutImg}
+            alt="Cute gray dog lying in a driveway with its tongue sticking out"
+            src="../images/dog-pic.jpg"
+          />
+          <p>
+            Sorry, we couldn’t find what you were looking for. Please enjoy this
+            picture of a cute dog and then click any of the navigation links
+            above to navigate through the site.
+          </p>
+
+          <p>
+            Photo by{" "}
+            <a
+              href="https://unsplash.com/@mutedtone?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Christopher Ayme
+            </a>{" "}
+            on{" "}
+            <a
+              href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Unsplash
+            </a>
+          </p>
+        </section>
       </section>
     </Layout>
   );

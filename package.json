@@ -1,16 +1,15 @@
 {
   "name": "online-resume-portfolio",
   "private": true,
-  "description": "Paul Fischer's online resume portfolio",
+  "description": "Paul Fischer's online resume portfolio.",
   "version": "0.1.0",
-  "license": "0BSD",
+  "author": "Paul Fischer <paulfischerdev@gmail.com>",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
     "start": "gatsby develop",
     "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "clean": "gatsby clean"
   },
   "dependencies": {
     "gatsby": "^5.2.0",
@@ -22,11 +21,18 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
+  "keywords": [
+    "web developer",
+    "software engineer",
+    "resume",
+    "portfolio"
+  ],
+  "license": "UNLICENSED",
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
+    "url": "https://github.com/pfischer1687/online-resume-portfolio"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/pfischer1687/online-resume-portfolio/issues"
   }
 }
