@@ -8,7 +8,7 @@ const Header = () => (
     <div className={styles.contentWrap}>
       <Link to="/">
         <StaticImage
-          src="../../static/favicon.png"
+          src="../images/favicon.png"
           alt="PF logo"
           className={styles.logo}
         />
