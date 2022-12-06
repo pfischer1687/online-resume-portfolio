@@ -44,4 +44,16 @@
   }
 }
 @media screen and (max-width: 749px) {
+  .typing-cat-line-break::after {
+    content: "\A";
+    white-space: pre;
+  }
+  .projects-item img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    min-width: 275px;
+    padding-bottom: 15px;
+  }
 }

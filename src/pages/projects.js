@@ -21,6 +21,7 @@ const ProjectsPage = () => {
         <h3 id="cat-terminal" className="hidden">
           <span className="terminal-usr">guest@guest</span>:
           <span className="terminal-path">~/projects</span>${" "}
+          <span className={styles.typingCatLineBreak}></span>
           <span id="cat-text" className={styles.typingCat}>
             cat projects.txt
           </span>
