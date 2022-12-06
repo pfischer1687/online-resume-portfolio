@@ -5,6 +5,9 @@
   width: 300px;
   border-radius: 5px;
 }
+.skill-icons img {
+  height: 40px;
+}
 
 /* For typing animation */
 .typing-cd {
@@ -27,9 +30,6 @@
     grid-template-columns: repeat(5, auto);
     text-align: center;
     margin-left: -21px;
-  }
-  .skill-icons img {
-    height: 40px;
   }
   .about-details {
     margin-top: -19px;
