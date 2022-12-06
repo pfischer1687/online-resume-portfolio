@@ -1,0 +1,15 @@
+.job-details h3,
+.job-details p {
+  margin: 0;
+}
+.experience h3 + p {
+  font-style: italic;
+}
+
+/* For typing animation */
+.typing-cd {
+  --num-letters: 15;
+}
+.typing-cat {
+  --num-letters: 18;
+}
