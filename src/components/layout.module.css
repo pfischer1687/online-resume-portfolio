@@ -4,9 +4,6 @@
   margin-top: 15px;
   text-align: center;
 }
-.contact-links img {
-  height: 40px;
-}
 .page-footer {
   padding-top: 15px;
 }
@@ -26,6 +23,9 @@
   .contact-links {
     max-width: 550px;
   }
+  .contact-links img {
+    height: 40px !important;
+  }
   .gmail-name::after {
     content: "paulfischerdev@gmail.com";
   }
@@ -42,7 +42,7 @@
     max-width: 375px;
   }
   .contact-links img {
-    height: 30px;
+    height: 30px !important;
   }
   .gmail-name::after {
     content: "Gmail";

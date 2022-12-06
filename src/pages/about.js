@@ -33,8 +33,8 @@ const AboutPage = () => {
           <div>
             <StaticImage
               className={styles.aboutImg}
-              src="../images/about-me.jpg"
-              alt="Photo of me."
+              src="../images/about-me.png"
+              alt="Photo of Paul Fischer."
             />
           </div>
           <div className={styles.aboutDetails}>
