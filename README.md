@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://paulfischer.dev/" target="_blank" rel="noreferrer">
-    <img alt="PF logo" src="./src/images/favicon.png" width="60" />
+    <img alt="PF logo" src="./src/images/favicon.png" width="300" />
   </a>
 </p>
 <h1 align="center">
