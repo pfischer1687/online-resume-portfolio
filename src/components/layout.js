@@ -98,11 +98,7 @@ const Layout = ({
               rel="noreferrer"
             >
               <div>
-                <StaticImage
-                  src="../images/gmail-logo.png"
-                  alt="Gmail logo"
-                  style={{ filter: "invert(100%)" }}
-                />
+                <StaticImage src="../images/gmail-logo.png" alt="Gmail logo" />
               </div>
               <div className={styles.gmailName}></div>
             </a>

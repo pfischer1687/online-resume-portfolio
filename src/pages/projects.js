@@ -53,8 +53,8 @@ const ProjectsPage = () => {
             <p>
               Learn about modern portfolio theory - interactively! Technical
               skills: JavaScript, HTML/CSS, Python, React.js, Gatsby, Pandas,
-              npm, Visual Studio Code, IPython/Jupyter, Chart.js, Formik, yup,
-              yfinance
+              npm, Visual Studio Code, IPython/Jupyter, Git, GraphQL, Chart.js,
+              Formik, yup, yfinance
             </p>
             <a
               href="https://meanvarianceanalyzermain.gatsbyjs.io/"

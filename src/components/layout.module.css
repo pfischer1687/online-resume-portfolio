@@ -24,7 +24,7 @@
     max-width: 550px;
   }
   .contact-links img {
-    height: 40px !important;
+    width: 40px;
   }
   .gmail-name::after {
     content: "paulfischerdev@gmail.com";
@@ -42,7 +42,7 @@
     max-width: 375px;
   }
   .contact-links img {
-    height: 30px !important;
+    width: 30px;
   }
   .gmail-name::after {
     content: "Gmail";
