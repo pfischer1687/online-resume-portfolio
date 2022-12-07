@@ -52,7 +52,7 @@ const Layout = ({
           </span>
         </h3>
         <h3 id="nav-links" className={navAnim ? "hidden" : null}>
-          <div className={styles.contactLinks}>
+          <div className={styles.navLinks}>
             <a
               href="https://github.com/pfischer1687"
               target="_blank"
@@ -64,7 +64,7 @@ const Layout = ({
                   alt="GitHub logo"
                 />
               </div>
-              <div>GitHub</div>
+              <div className={styles.contactLinks}>GitHub</div>
             </a>
             <a
               href="https://www.linkedin.com/in/paul-fischer-816042127"
@@ -77,7 +77,7 @@ const Layout = ({
                   alt="LinkedIn logo"
                 />
               </div>
-              <div>LinkedIn</div>
+              <div className={styles.contactLinks}>LinkedIn</div>
             </a>
             <a
               href="https://twitter.com/PaulFis43236408"
@@ -90,7 +90,7 @@ const Layout = ({
                   alt="Twitter logo"
                 />
               </div>
-              <div>Twitter</div>
+              <div className={styles.contactLinks}>Twitter</div>
             </a>
             <a
               href="mailto:paulfischerdev@gmail.com"
@@ -100,12 +100,12 @@ const Layout = ({
               <div>
                 <StaticImage src="../images/gmail-logo.png" alt="Gmail logo" />
               </div>
-              <div className={styles.gmailName}></div>
+              <div
+                className={`${styles.contactLinks} ${styles.gmailName}`}
+              ></div>
             </a>
-          </div>
-          <div className={styles.navLinks}>
-            <Link to="/about">about</Link> <Link to="/projects">projects</Link>{" "}
-            <Link to="/education">education</Link>{" "}
+            <Link to="/about">about</Link> <Link to="/projects">projects</Link>
+            <Link to="/education">education</Link>
             <Link to="/experience">experience</Link> <Link to="/404">404</Link>
           </div>
         </h3>
