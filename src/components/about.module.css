@@ -29,7 +29,7 @@
     margin-left: -21px;
   }
   .skill-icons img {
-    width: 40px;
+    width: 40px !important;
   }
   .about-details {
     margin-top: -19px;
@@ -42,7 +42,7 @@
     text-align: center;
   }
   .skill-icons img {
-    width: 30px;
+    width: 30px !important;
   }
   .about-img {
     display: block;
