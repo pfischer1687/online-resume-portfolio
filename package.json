@@ -2,7 +2,7 @@
   "name": "online-resume-portfolio",
   "private": true,
   "description": "Paul Fischer's online resume portfolio.",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "author": "Paul Fischer <paulfischerdev@gmail.com>",
   "scripts": {
     "build": "gatsby build",

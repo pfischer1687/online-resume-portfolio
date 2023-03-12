@@ -1,11 +1,11 @@
-.contact-links {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 15px;
-  text-align: center;
+.nav-links {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: left;
 }
 .page-footer {
   padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 /* Typing animations */
@@ -20,35 +20,34 @@
 /* Responsive
 ------------------------------*/
 @media screen and (min-width: 750px) {
-  .contact-links {
-    max-width: 550px;
+  .nav-links {
+    line-height: 2;
   }
-  .contact-links img {
-    width: 40px !important;
+  .nav-links img {
+    width: 30px !important;
+  }
+  .contact-links {
+    margin-top: -0.75rem;
   }
   .gmail-name::after {
     content: "paulfischerdev@gmail.com";
-  }
-  .nav-links a {
-    padding-right: 20px;
-    line-height: 40px;
   }
 }
 @media screen and (max-width: 749px) {
   h3 {
     font-size: 1rem;
   }
-  .contact-links {
-    max-width: 375px;
+  .nav-links {
+    font-size: 0.75rem;
+    line-height: 2.5;
   }
-  .contact-links img {
-    width: 30px !important;
+  .nav-links img {
+    width: 20px !important;
+  }
+  .contact-links {
+    margin-top: -0.75rem;
   }
   .gmail-name::after {
     content: "Gmail";
-  }
-  .nav-links a {
-    padding-right: 15px;
-    line-height: 30px;
   }
 }

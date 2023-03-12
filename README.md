@@ -1,25 +1,26 @@
 <p align="center">
-  <a href="https://paulfischer.dev/" target="_blank" rel="noreferrer">
-    <img alt="PF logo" src="./src/images/favicon.png" width="200" />
+  <a href="https://paulfischer.dev/">
+    <img alt="PF logo" src="./src/images/favicon.svg" width="200" />
   </a>
 </p>
 <h1 align="center">
   Paul Fischer's Online Resume Portfolio
 </h1>
 
-<a href="https://paulfischer.dev/" target="_blank" rel="noreferrer">View live site</a>
+[View live site](https://paulfischer.dev/)
 
 ## Version
 
-0.1.0
+1.0.0
 
 ## Author
 
 Paul Fischer
 
 - Email: paulfischerdev@gmail.com
-- Twitter: <a href="https://twitter.com/PaulFis43236408" target="_blank" rel="noreferrer">@PaulFis43236408</a>
-- GitHub: <a href="https://github.com/pfischer1687" target="_blank" rel="noreferrer">pfischer1687</a>
+- Twitter: [@PaulFis43236408](https://twitter.com/PaulFis43236408)
+- GitHub: [pfischer1687](https://github.com/pfischer1687)
+- Website: [www.paulfischer.dev](https://paulfischer.dev/)
 
 ## Dependencies
 
@@ -34,10 +35,11 @@ Paul Fischer
 
 ## Keywords
 
-- web developer
-- software engineer
-- resume
-- portfolio
+- Software Engineer
+- Web Developer
+- Financial Quantitative Analyst
+- Resume
+- Portfolio
 
 ## License
 
@@ -52,8 +54,8 @@ Unlicensed - © 2022, All rights reserved.
 
 ## Repository
 
-git: <a href="https://github.com/pfischer1687/online-resume-portfolio" target="_blank" rel="noreferrer">https://github.com/pfischer1687/online-resume-portfolio</a>
+git: [https://github.com/pfischer1687/online-resume-portfolio](https://github.com/pfischer1687/online-resume-portfolio)
 
 ## Bugs
 
-<a href="https://github.com/pfischer1687/online-resume-portfolio/issues" target="_blank" rel="noreferrer">https://github.com/pfischer1687/online-resume-portfolio/issues</a>
+[https://github.com/pfischer1687/online-resume-portfolio/issues](https://github.com/pfischer1687/online-resume-portfolio/issues)
