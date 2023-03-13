@@ -10,7 +10,7 @@ const Header = () => (
       <div className={styles.headerContainer}>
         <Link to="/">
           <StaticImage
-            src="../images/favicon.png"
+            src="../images/favicon.svg"
             alt="PF logo"
             className={styles.logo}
           />
