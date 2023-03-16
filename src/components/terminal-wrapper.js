@@ -5,8 +5,9 @@ const TerminalWrapper = ({
   sectionName,
   cdNumLetters,
   catNumLetters,
-  lineBreak = true,
   children,
+  animationDelay = 100,
+  lineBreak = true,
   precedesFooter = false,
 }) => {
   const [isCdVisible, setIsCdVisible] = React.useState(false);
@@ -17,11 +18,15 @@ const TerminalWrapper = ({
     threshold: 0.1,
     triggerOnce: true,
     onChange: (isSectionVisible) => {
-      let cdTimeout = 100;
-      if (sectionName === "about") cdTimeout = 4000;
-      setTimeout(() => setIsCdVisible(isSectionVisible), cdTimeout);
-      setTimeout(() => setIsCatVisible(isSectionVisible), cdTimeout + 3000);
-      setTimeout(() => setIsContentVisible(isSectionVisible), cdTimeout + 6000);
+      setTimeout(() => setIsCdVisible(isSectionVisible), animationDelay);
+      setTimeout(
+        () => setIsCatVisible(isSectionVisible),
+        animationDelay + 1500
+      );
+      setTimeout(
+        () => setIsContentVisible(isSectionVisible),
+        animationDelay + 3000
+      );
     },
   });
 
@@ -66,7 +71,11 @@ const TerminalWrapper = ({
           <span className="terminal-usr">guest@guest</span>:
           <span className="terminal-path">~/{sectionName}</span>$
           <span
-            style={{ "--num-letters": 1, "--blink-count": "infinite" }}
+            style={{
+              "--num-letters": 1,
+              "--blink-count": "infinite",
+              "--blink-speed": "750ms",
+            }}
             className="typing"
           >
             &nbsp;

@@ -11,7 +11,9 @@ COLOR PALETTE
 /* Global syles
 ------------------------------*/
 :root {
-  --blink-count: 4; /* For typing animation */
+  /* For typing animation */
+  --blink-count: 3;
+  --blink-speed: 0.5s;
 }
 html {
   box-sizing: border-box;
@@ -46,8 +48,6 @@ h2 {
   padding-top: 15px;
   padding-bottom: 15px;
 }
-
-/* Used in multiple pages */
 .content-wrap {
   max-width: 800px;
   width: 85%;
@@ -102,15 +102,15 @@ h2 {
   background: black;
 }
 .typing::before {
-  animation: typingAnim 0.5s steps(var(--num-letters)) 1s forwards;
+  animation: typingAnim 0.5s steps(var(--num-letters)) 0.25s forwards;
 }
 .typing::after {
   width: 15px;
   background: transparent;
 }
 .typing::after {
-  animation: typingAnim 0.5s steps(var(--num-letters)) 1s forwards,
-    blinkingAnim 750ms var(--blink-count);
+  animation: typingAnim 0.5s steps(var(--num-letters)) 0.25s forwards,
+    blinkingAnim var(--blink-speed) var(--blink-count);
 }
 @keyframes typingAnim {
   to {
@@ -120,6 +120,15 @@ h2 {
 @keyframes blinkingAnim {
   50% {
     background: white;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .typing::before {
+    background: none;
+    animation: none;
+  }
+  .typing::after {
+    animation: none;
   }
 }
 
