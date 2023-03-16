@@ -5,38 +5,13 @@ import { StaticImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
 import "./global.css";
 
-const Layout = ({
-  children,
-  footerTerminalTime = 7000,
-  navAnim = false,
-  pagePath = "",
-}) => {
+const Layout = ({ is404 = false, children }) => {
+  const [isNavVisible, setIsNavVisible] = React.useState(false);
+
   React.useEffect(() => {
-    // Nav menu typing animation
-    if (navAnim) {
-      const navTerminalTime = 1000;
-      const navLinksTime = 4000;
-
-      const navTerminal = document.getElementById("nav-terminal");
-      const navTerminalLs = document.getElementById("nav-terminal-ls");
-      const navLinks = document.getElementById("nav-links");
-
-      setTimeout(() => {
-        navTerminal.classList.add("show");
-        if (navAnim) {
-          navTerminalLs.classList.add("typing");
-        }
-      }, navTerminalTime);
-      setTimeout(() => {
-        navLinks.classList.add("show");
-      }, navLinksTime);
-    }
-
-    // footer typing animation
-    const footerTerminal = document.getElementById("footer-terminal");
-    setTimeout(() => {
-      footerTerminal.classList.add("show");
-    }, footerTerminalTime);
+    let navMenuDelay = 3000;
+    if (is404) navMenuDelay = 0;
+    setTimeout(() => setIsNavVisible(true), navMenuDelay);
   });
 
   return (
@@ -44,14 +19,17 @@ const Layout = ({
       <Header />
 
       <nav className="content-wrap terminal-code">
-        <h3 id="nav-terminal" className={navAnim ? "hidden" : null}>
+        <h3>
           <span className="terminal-usr">guest@guest</span>:
           <span className="terminal-path">~</span>${" "}
-          <span id="nav-terminal-ls" className={styles.typingLs}>
+          <span
+            style={{ "--num-letters": 2 }}
+            className={is404 ? "show" : "typing"}
+          >
             ls
           </span>
         </h3>
-        <h3 id="nav-links" className={navAnim ? "hidden" : null}>
+        <h3 className={isNavVisible ? "show" : "hidden"}>
           <div className={styles.navLinks}>
             <a
               href="https://github.com/pfischer1687"
@@ -104,22 +82,16 @@ const Layout = ({
                 className={`${styles.contactLinks} ${styles.gmailName}`}
               ></div>
             </a>
-            <Link to="#about">about</Link> <Link to="#projects">projects</Link>
-            <Link to="#education">education</Link>
-            <Link to="#experience">experience</Link> <Link to="/404">404</Link>
+            <Link to={is404 ? "/" : "#about"}>about</Link>{" "}
+            <Link to={is404 ? "/" : "#projects"}>projects</Link>
+            <Link to={is404 ? "/" : "#education"}>education</Link>
+            <Link to={is404 ? "/" : "#experience"}>experience</Link>{" "}
+            <Link to="/404">404</Link>
           </div>
         </h3>
       </nav>
 
       <main>{children}</main>
-
-      <footer className={navAnim ? null : styles.pageFooter}>
-        <h3 id="footer-terminal" className="content-wrap terminal-code hidden">
-          <span className="terminal-usr">guest@guest</span>:
-          <span className="terminal-path">~{pagePath}</span>$
-          <span className={`typing ${styles.typingFooter}`}>&nbsp;</span>
-        </h3>
-      </footer>
     </>
   );
 };

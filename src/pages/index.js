@@ -1,14 +1,14 @@
 import * as React from "react";
-import Seo from "../components/seo";
 import Layout from "../components/layout";
 import About from "../components/about";
 import Projects from "../components/projects";
 import Education from "../components/education";
 import Experience from "../components/experience";
+import Seo from "../components/seo";
 
 const IndexPage = () => {
   return (
-    <Layout navAnim={true} footerTerminalTime={5000}>
+    <Layout>
       <div id="about">
         <About />
       </div>

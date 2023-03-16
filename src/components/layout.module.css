@@ -3,19 +3,6 @@
   grid-template-columns: repeat(4, 1fr);
   text-align: left;
 }
-.page-footer {
-  padding-top: 15px;
-  padding-bottom: 15px;
-}
-
-/* Typing animations */
-.typing-ls {
-  --num-letters: 2;
-}
-.typing-footer {
-  --num-letters: 1;
-  --blink-count: infinite;
-}
 
 /* Responsive
 ------------------------------*/

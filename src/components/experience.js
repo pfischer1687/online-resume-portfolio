@@ -8,6 +8,7 @@ const Experience = () => {
       sectionName="experience"
       cdNumLetters={15}
       catNumLetters={18}
+      precedesFooter={true}
     >
       <section className={`${styles.experience} divider`}>
         <h2>Work Experience</h2>

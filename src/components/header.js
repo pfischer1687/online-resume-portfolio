@@ -5,7 +5,6 @@ import { Link } from "gatsby";
 
 const Header = () => (
   <header>
-    {/* <div className={styles.contentWrap}> */}
     <div className="content-wrap">
       <div className={styles.headerContainer}>
         <Link to="/">

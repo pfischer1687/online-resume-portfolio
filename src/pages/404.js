@@ -3,13 +3,17 @@ import * as styles from "../components/404.module.css";
 import Seo from "../components/seo";
 import Layout from "../components/layout";
 import { StaticImage } from "gatsby-plugin-image";
+import TerminalWrapper from "../components/terminal-wrapper";
 
 const NotFoundPage = () => {
-  const pageTitle = "404";
-
   return (
-    <Layout pagePath={`/${pageTitle}`}>
-      <section id="content" className="content-wrap hidden text-file ">
+    <Layout is404={true}>
+      <TerminalWrapper
+        sectionName="404"
+        cdNumLetters={8}
+        catNumLetters={11}
+        precedesFooter={true}
+      >
         <h2 className={styles.title}>404: Page Not Found</h2>
         <section className={styles.content}>
           <StaticImage
@@ -42,7 +46,7 @@ const NotFoundPage = () => {
             </a>
           </p>
         </section>
-      </section>
+      </TerminalWrapper>
     </Layout>
   );
 };

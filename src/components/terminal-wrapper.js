@@ -7,6 +7,7 @@ const TerminalWrapper = ({
   catNumLetters,
   lineBreak = true,
   children,
+  precedesFooter = false,
 }) => {
   const [isCdVisible, setIsCdVisible] = React.useState(false);
   const [isCatVisible, setIsCatVisible] = React.useState(false);
@@ -16,7 +17,7 @@ const TerminalWrapper = ({
     threshold: 0.1,
     triggerOnce: true,
     onChange: (isSectionVisible) => {
-      let cdTimeout = 1000;
+      let cdTimeout = 100;
       if (sectionName === "about") cdTimeout = 4000;
       setTimeout(() => setIsCdVisible(isSectionVisible), cdTimeout);
       setTimeout(() => setIsCatVisible(isSectionVisible), cdTimeout + 3000);
@@ -56,6 +57,22 @@ const TerminalWrapper = ({
       >
         {children}
       </div>
+      {precedesFooter && (
+        <h3
+          className={`content-wrap terminal-code page-footer ${
+            isContentVisible ? "show" : "hidden"
+          }`}
+        >
+          <span className="terminal-usr">guest@guest</span>:
+          <span className="terminal-path">~/{sectionName}</span>$
+          <span
+            style={{ "--num-letters": 1, "--blink-count": "infinite" }}
+            className="typing"
+          >
+            &nbsp;
+          </span>
+        </h3>
+      )}
     </>
   );
 };
