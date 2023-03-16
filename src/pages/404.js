@@ -12,6 +12,7 @@ const NotFoundPage = () => {
         sectionName="404"
         cdNumLetters={8}
         catNumLetters={11}
+        lineBreak={false}
         precedesFooter={true}
       >
         <h2 className={styles.title}>404: Page Not Found</h2>
