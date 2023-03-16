@@ -104,9 +104,9 @@ const Layout = ({
                 className={`${styles.contactLinks} ${styles.gmailName}`}
               ></div>
             </a>
-            <Link to="/about">about</Link> <Link to="/projects">projects</Link>
-            <Link to="/education">education</Link>
-            <Link to="/experience">experience</Link> <Link to="/404">404</Link>
+            <Link to="#about">about</Link> <Link to="#projects">projects</Link>
+            <Link to="#education">education</Link>
+            <Link to="#experience">experience</Link> <Link to="/404">404</Link>
           </div>
         </h3>
       </nav>

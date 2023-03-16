@@ -18,14 +18,6 @@
   border-radius: 5px;
 }
 
-/* For typing animation */
-.typing-cd {
-  --num-letters: 13;
-}
-.typing-cat {
-  --num-letters: 16;
-}
-
 /* Responsive
   ------------------------------*/
 @media screen and (min-width: 750px) {

@@ -1,38 +1,19 @@
 import * as React from "react";
-import * as styles from "../components/about.module.css";
+import * as styles from "../components/404.module.css";
 import Seo from "../components/seo";
 import Layout from "../components/layout";
-import TypingAnimation from "../components/typing-animation";
 import { StaticImage } from "gatsby-plugin-image";
 
 const NotFoundPage = () => {
   const pageTitle = "404";
-  React.useEffect(() => {
-    TypingAnimation();
-  });
 
   return (
     <Layout pagePath={`/${pageTitle}`}>
-      <div className="content-wrap terminal-code">
-        <h3>
-          <span className="terminal-usr">guest@guest</span>:
-          <span className="terminal-path">~</span>${" "}
-          <span className={`typing ${styles.typingCd}`}>cd ~/{pageTitle}</span>
-        </h3>
-        <h3 id="cat-terminal" className="hidden">
-          <span className="terminal-usr">guest@guest</span>:
-          <span className="terminal-path">~/{pageTitle}</span>${" "}
-          <span id="cat-text" className={styles.typingCat}>
-            cat {pageTitle}.txt
-          </span>
-        </h3>
-      </div>
-
       <section id="content" className="content-wrap hidden text-file ">
-        <h2 className={styles.aboutMe}>404: Page Not Found</h2>
-        <section className={styles.aboutItem}>
+        <h2 className={styles.title}>404: Page Not Found</h2>
+        <section className={styles.content}>
           <StaticImage
-            className={styles.aboutImg}
+            className={styles.dogImg}
             alt="Cute gray dog lying in a driveway with its tongue sticking out"
             src="../images/dog-pic.jpg"
           />

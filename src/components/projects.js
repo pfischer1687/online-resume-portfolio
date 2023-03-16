@@ -1,38 +1,16 @@
 import * as React from "react";
-import * as styles from "../components/projects.module.css";
+import * as styles from "./projects.module.css";
 import { StaticImage } from "gatsby-plugin-image";
-import Seo from "../components/seo";
-import Layout from "../components/layout";
-import TypingAnimation from "../components/typing-animation";
+import TerminalWrapper from "./terminal-wrapper";
 
-const ProjectsPage = () => {
-  const pageTitle = "projects";
-  React.useEffect(() => {
-    TypingAnimation();
-  });
-
+const Projects = () => {
   return (
-    <Layout pagePath="/projects">
-      <div className="content-wrap terminal-code">
-        <h3>
-          <span className="terminal-usr">guest@guest</span>:
-          <span className="terminal-path">~</span>${" "}
-          <span className={`typing ${styles.typingCd}`}>cd ~/{pageTitle}</span>
-        </h3>
-        <h3 id="cat-terminal" className="hidden">
-          <span className="terminal-usr">guest@guest</span>:
-          <span className="terminal-path">~/{pageTitle}</span>${" "}
-          <span className="typing-cat-line-break"></span>
-          <span id="cat-text" className={styles.typingCat}>
-            cat {pageTitle}.txt
-          </span>
-        </h3>
-      </div>
-
-      <section
-        id="content"
-        className={`text-file content-wrap ${styles.projects} divider hidden`}
-      >
+    <TerminalWrapper
+      sectionName="projects"
+      cdNumLetters={13}
+      catNumLetters={16}
+    >
+      <section className={`${styles.projects} divider`}>
         <h2>Featured Projects and Publications</h2>
         <p>
           View selected projects and publications below. More details for each
@@ -63,7 +41,7 @@ const ProjectsPage = () => {
             >
               View live site
             </a>
-            <iframe
+            {/* <iframe
               width="560"
               height="315"
               src="https://www.youtube-nocookie.com/embed/nWyH2oi91QU"
@@ -71,7 +49,7 @@ const ProjectsPage = () => {
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowfullscreen
-            ></iframe>
+            ></iframe> */}
           </div>
         </section>
 
@@ -225,10 +203,8 @@ const ProjectsPage = () => {
         </section> */}
         {/* <!-- End of Project block. --> */}
       </section>
-    </Layout>
+    </TerminalWrapper>
   );
 };
 
-export const Head = () => <Seo title="Projects" />;
-
-export default ProjectsPage;
+export default Projects;

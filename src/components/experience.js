@@ -1,37 +1,15 @@
 import * as React from "react";
-import * as styles from "../components/experience.module.css";
-import Seo from "../components/seo";
-import Layout from "../components/layout";
-import TypingAnimation from "../components/typing-animation";
+import * as styles from "./experience.module.css";
+import TerminalWrapper from "./terminal-wrapper";
 
-const ExperiencePage = () => {
-  const pageTitle = "experience";
-  React.useEffect(() => {
-    TypingAnimation();
-  });
-
+const Experience = () => {
   return (
-    <Layout pagePath={`/${pageTitle}`}>
-      <div className="content-wrap terminal-code">
-        <h3>
-          <span className="terminal-usr">guest@guest</span>:
-          <span className="terminal-path">~</span>${" "}
-          <span className={`typing ${styles.typingCd}`}>cd ~/{pageTitle}</span>
-        </h3>
-        <h3 id="cat-terminal" className="hidden">
-          <span className="terminal-usr">guest@guest</span>:
-          <span className="terminal-path">~/{pageTitle}</span>${" "}
-          <span className="typing-cat-line-break"></span>
-          <span id="cat-text" className={styles.typingCat}>
-            cat {pageTitle}.txt
-          </span>
-        </h3>
-      </div>
-
-      <section
-        id="content"
-        className={`text-file content-wrap ${styles.experience} divider hidden`}
-      >
+    <TerminalWrapper
+      sectionName="experience"
+      cdNumLetters={15}
+      catNumLetters={18}
+    >
+      <section className={`${styles.experience} divider`}>
         <h2>Work Experience</h2>
 
         {/* <!-- Job 1 --> */}
@@ -56,14 +34,14 @@ const ExperiencePage = () => {
             </p>
           </div>
           {/* <!--
-          <p>Optional list:</p>
-          <ul>
-            <li>Delete this list if you don't need it.</li>
-            <li>Created...</li>
-            <li>Lead...</li>
-            <li>Responsible for...</li>
-          </ul>
-          --> */}
+  <p>Optional list:</p>
+  <ul>
+    <li>Delete this list if you don't need it.</li>
+    <li>Created...</li>
+    <li>Lead...</li>
+    <li>Responsible for...</li>
+  </ul>
+  --> */}
         </section>
 
         {/* <!-- Job 2 --> */}
@@ -88,10 +66,8 @@ const ExperiencePage = () => {
         </section>
         {/* <!-- End of Job block. --> */}
       </section>
-    </Layout>
+    </TerminalWrapper>
   );
 };
 
-export const Head = () => <Seo title="Experience" />;
-
-export default ExperiencePage;
+export default Experience;

@@ -8,11 +8,3 @@
 .education p {
   width: 85%;
 }
-
-/* For typing animation */
-.typing-cd {
-  --num-letters: 14;
-}
-.typing-cat {
-  --num-letters: 17;
-}

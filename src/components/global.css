@@ -3,9 +3,9 @@ COLOR PALETTE
 #FFFFF0 - ivory
 #000000 - black
 #8B008B - dark magenta
-#303030 - (custom) text file gray
-#6F6FFF - (custom) nav link blue
-#570057 - (custom) magenta link
+#303030 - text file gray
+#6F6FFF - nav link blue
+#570057 - magenta link
 */
 
 /* Global syles
@@ -74,10 +74,10 @@ h2 {
 /* For staggering the typing animations */
 .hidden {
   opacity: 0;
-  transition: all 1s;
 }
 .show {
   opacity: 1;
+  transition: all 1s;
 }
 
 /* Typing animations */

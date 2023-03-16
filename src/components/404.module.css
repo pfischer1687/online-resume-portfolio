@@ -1,0 +1,24 @@
+.title {
+  padding-bottom: 10px;
+}
+.dog-img {
+  width: 300px;
+  border-radius: 5px;
+}
+
+/* Responsive
+  ------------------------------*/
+@media screen and (min-width: 750px) {
+  .content {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    column-gap: 20px;
+  }
+}
+@media screen and (max-width: 749px) {
+  .dog-img {
+    display: block;
+    margin: auto;
+    max-width: fit-content;
+  }
+}
