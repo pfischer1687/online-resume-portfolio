@@ -20,11 +20,11 @@ const Projects = () => {
               src="../images/mean-variance.png"
               alt="The potential difference due to LLM compared to the electron configurations accepted by the Metropolis-Hastings algorithm."
             />
+            <h4 className={styles.ytVideoTitle}>Demo Video</h4>
             <iframe
               className={styles.ytVideo}
               src="https://www.youtube-nocookie.com/embed/nWyH2oi91QU"
               title="Mean-Variance Analyzer Demo"
-              frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
             ></iframe>
           </div>
@@ -134,7 +134,7 @@ const Projects = () => {
           <div>
             <h3>
               Wolfram Physics Project: Rules Generating Elementary Particle
-              Behavior in Wolfram Model
+              Behavior in the Wolfram Model
             </h3>
             <p className={styles.projectsDate}>December 2020 – January 2021</p>
             <ul className={styles.projectsList}>
@@ -160,38 +160,6 @@ const Projects = () => {
             </a>
           </div>
         </section>
-
-        {/* <!-- Project 4 --> */}
-        {/* <section className={styles.projectsItem}>
-          <div>
-            <StaticImage
-              src="../images/using-dodd.png"
-              alt="Using a least squares model to best fit historical Real GDP growth to MSFT % growth so that future Real GDP growth predictions can be used to predict MSFT stock prices given Federal Reserve data in the COVID-19 pandemic."
-            />
-          </div>
-
-          <div>
-            <h3>
-              Using Dodd-Frank Act Stress Test data to predict percentage growth
-              ofMicrosoft Corporation stock price through 2023 Q1
-            </h3>
-            <p>
-              Wolfram Data Science Bootcamp 2020 (Wolfram Certified Level II in
-              Multiparadigm Data Science). Created a model for theperformance of
-              Microsoft stock price during the pandemic of COVID-19 according
-              tostress test dataprovided by the Federal Reserve for severely
-              adverse conditions. Technical Skills: Wolfram Mathematica,Data
-              Visualization,Data Cleaning, Data Manipulation.
-            </p>
-            <a
-              href="https://github.com/pfischer1687/Data-Science/blob/main/Wolfram%20Certified%20Level%20II%20in%20Multiparadigm%20Data%20Science/ComputationalEssayPaulFischer.pdf"
-              target="_blank"
-              rel="noreferrer"
-            >
-              View project
-            </a>
-          </div>
-        </section> */}
       </section>
     </TerminalWrapper>
   );
