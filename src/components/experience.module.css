@@ -1,7 +1,21 @@
+.experience section {
+  padding-bottom: 0.5rem;
+}
 .job-details h3,
 .job-details p {
   margin: 0;
 }
-.experience h3 + p {
+.exp-date {
   font-style: italic;
+}
+.exp-list {
+  margin-top: 0.5rem;
+}
+
+/* Responsive
+------------------------------*/
+@media screen and (max-width: 749px) {
+  .exp-list {
+    padding-left: 1rem;
+  }
 }

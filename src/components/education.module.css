@@ -1,9 +1,15 @@
 .education section {
   padding-bottom: 0.5rem;
 }
+.education h3,
+.education p {
+  margin: 0;
+}
+.education p {
+  width: 85%;
+}
 .education ul {
   margin-top: 0.5rem;
-  padding-left: 1rem;
 }
 .education-title {
   font-weight: bold;
@@ -11,13 +17,14 @@
 .certs-bullet {
   padding-top: 1rem;
 }
-.education-header {
-  margin-top: 2rem;
+.degree-date {
+  font-style: italic;
 }
-.education h3,
-.education p {
-  margin: 0;
-}
-.education p {
-  width: 85%;
+
+/* Responsive
+------------------------------*/
+@media screen and (max-width: 749px) {
+  .education ul {
+    padding-left: 1rem;
+  }
 }

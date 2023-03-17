@@ -17,9 +17,9 @@ const Experience = () => {
         <section>
           <div className={styles.jobDetails}>
             <h3>Graduate Assistant/Teaching Associate</h3>
-            <h3>August 2019 – May 2022</h3>
-            <h3>CSULB Physics Department | Long Beach, CA</h3>
-            <ul>
+            <p className={styles.expDate}>August 2019 – May 2022</p>
+            <p>CSULB Physics Department | Long Beach, CA</p>
+            <ul className={styles.expList}>
               <li>
                 Led students through the development and testing of
                 computational physics simulations in Python
@@ -32,9 +32,9 @@ const Experience = () => {
         <section>
           <div className={styles.jobDetails}>
             <h3>Physics/AP Physics Teacher</h3>
-            <h3>August 2016 – June 2019</h3>
-            <h3>Saint Monica Catholic High School | Santa Monica, CA</h3>
-            <ul>
+            <p className={styles.expDate}>August 2016 – June 2019</p>
+            <p>Saint Monica Catholic High School | Santa Monica, CA</p>
+            <ul className={styles.expList}>
               <li>
                 Directed students on how to leverage statistical techniques for
                 data analysis in Microsoft Excel

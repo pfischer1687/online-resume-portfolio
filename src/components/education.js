@@ -10,13 +10,10 @@ const Education = () => {
       catNumLetters={17}
     >
       <section className={`${styles.education} divider`}>
-        <h2>
-          Online Courses
-          <wbr />/<wbr />
-          Certifications
-        </h2>
+        <h2>Education</h2>
 
         <section>
+          <h3>Online Courses/Certifications</h3>
           <ul>
             <li>
               <span className={styles.educationTitle}>LinkedIn Learning:</span>{" "}
@@ -33,14 +30,12 @@ const Education = () => {
           </ul>
         </section>
 
-        <h2 className={styles.educationHeader}>Education</h2>
-
         {/* <!-- School 1 --> */}
         <section>
           <h3>
             California State University, Long Beach (CSULB) | Long Beach, CA
           </h3>
-          <p>Degree Conferred: August 2022</p>
+          <p className={styles.degreeDate}>Degree Conferred: August 2022</p>
           <p>
             Master of Science in Physics, Computational Physics Option, GPA:
             4.00
@@ -57,7 +52,7 @@ const Education = () => {
         {/* <!-- School 2 --> */}
         <section>
           <h3>Loyola Marymount University (LMU) | Los Angeles, CA</h3>
-          <p>Degree Conferred: August 2016</p>
+          <p className={styles.degreeDate}>Degree Conferred: August 2016</p>
           <p>Bachelor of Science in Physics, Minor in Applied Mathematics</p>
           <ul>
             <li>
