@@ -1,9 +1,22 @@
+.education section {
+  padding-bottom: 0.5rem;
+}
+.education ul {
+  margin-top: 0.5rem;
+  padding-left: 1rem;
+}
+.education-title {
+  font-weight: bold;
+}
+.certs-bullet {
+  padding-top: 1rem;
+}
+.education-header {
+  margin-top: 2rem;
+}
 .education h3,
 .education p {
   margin: 0;
-}
-.education h3 + p {
-  font-style: italic;
 }
 .education p {
   width: 85%;

@@ -38,7 +38,7 @@ const About = () => {
             </a>{" "}
             for this site.
           </p>
-          <h3>Top Skills:</h3>
+          <h3>Skills/Programming Languages:</h3>
           <div className={styles.skillIcons}>
             <div>
               <StaticImage src="../images/python-logo.png" alt="Python logo" />
