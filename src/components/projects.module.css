@@ -26,7 +26,6 @@
 }
 .yt-video-title {
   text-align: center;
-  margin-top: 3.8rem;
   margin-bottom: 0.5rem;
 }
 .yt-video {
@@ -43,6 +42,9 @@
     grid-template-columns: 300px 1fr;
     column-gap: 20px;
   }
+  .yt-video-title {
+    margin-top: 3.8rem;
+  }
 }
 @media screen and (max-width: 749px) {
   .projects-item img {
@@ -52,5 +54,16 @@
     width: 60%;
     min-width: 275px;
     padding-bottom: 15px;
+  }
+  .yt-video-title {
+    margin-top: 0;
+  }
+  .yt-video {
+    margin-bottom: 1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    min-width: 275px;
   }
 }
