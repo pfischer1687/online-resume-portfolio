@@ -7,6 +7,7 @@
   display: inline-block;
   display: flex;
   justify-content: center;
+  margin-top: 1rem;
 }
 .projects a:hover {
   background: #8b008b;
@@ -16,6 +17,17 @@
 }
 .projects-item img {
   border-radius: 5px;
+}
+.projects-date {
+  margin-top: 0;
+}
+.projects-list {
+  padding-left: 1rem;
+}
+.yt-video {
+  width: 300px;
+  height: 200px;
+  padding-top: 1rem;
 }
 
 /* Responsive

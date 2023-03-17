@@ -11,11 +11,7 @@ const Projects = () => {
       catNumLetters={16}
     >
       <section className={`${styles.projects} divider`}>
-        <h2>Featured Projects and Publications</h2>
-        <p>
-          View selected projects and publications below. More details for each
-          project can be found by clicking the "View project" link.
-        </p>
+        <h2> Projects/Publications</h2>
 
         {/* <!-- Project 1 --> */}
         <section className={styles.projectsItem}>
@@ -24,32 +20,57 @@ const Projects = () => {
               src="../images/mean-variance.png"
               alt="The potential difference due to LLM compared to the electron configurations accepted by the Metropolis-Hastings algorithm."
             />
+            <iframe
+              className={styles.ytVideo}
+              src="https://www.youtube-nocookie.com/embed/nWyH2oi91QU"
+              title="Mean-Variance Analyzer Demo"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
+            ></iframe>
           </div>
 
           <div>
             <h3>Mean-Variance Analyzer</h3>
-            <p>
-              Learn about modern portfolio theory - interactively! Technical
-              skills: JavaScript, HTML/CSS, Python, React.js, Gatsby, Pandas,
-              npm, Visual Studio Code, IPython/Jupyter, Git, GraphQL, Chart.js,
-              Formik, yup, yfinance
-            </p>
+            <p className={styles.projectsDate}>October 2022 - March 2023</p>
+            <ul className={styles.projectsList}>
+              <li>
+                Developed a progressive web app (PWA) for financial portfolio
+                optimization with React.js deployed on Gatsby Cloud
+              </li>
+              <li>
+                Gathered, cleaned, and modified financial market data with
+                IPython/Jupyter and Pandas
+              </li>
+              <li>
+                Ensured accuracy of linear algebra functions across updates with
+                unit tests utilizing Jest
+              </li>
+              <li>
+                Designed custom UI/UX with CSS modules and incorporated requests
+                from multiple code reviewers via Git
+              </li>
+              <li>
+                Lighthouse report - Performance: 99, Accessibility: 97, Best
+                Practices: 100, SEO: 100
+              </li>
+            </ul>
+            <a href="https://mvanalyzer.dev/" target="_blank" rel="noreferrer">
+              Website
+            </a>
             <a
-              href="https://meanvarianceanalyzermain.gatsbyjs.io/"
+              href="https://github.com/pfischer1687/mean-variance-analyzer"
               target="_blank"
               rel="noreferrer"
             >
-              View live site
+              Source Code
             </a>
-            {/* <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube-nocookie.com/embed/nWyH2oi91QU"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-            ></iframe> */}
+            <a
+              href="https://github.com/pfischer1687/get-asset-data-for-mva"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Data
+            </a>
           </div>
         </section>
 
@@ -64,21 +85,40 @@ const Projects = () => {
 
           <div>
             <h3>
-              Realistic Fractional Quantum Hall Energy Gaps in Graphene via
-              Monte Carlo Simulations
+              Master’s Thesis: A Systematic Method for Constructing Realistic
+              Potentials in Real Space for Use in Fractional Quantum Hall Monte
+              Carlo Simulations
             </h3>
-            <p>
-              MS thesis(California State University, Long Beach). Developed a
-              scheme for incorporating Landau level mixing into parallelized
-              simulations of fractional quantum Hall effect states of graphene
-              run in theHigh Performance Computing (HPC) Lab. Technical Skills:
-              C, MPI, Python, Pandas, Matplotlib, NumPy, SciPy, SymPy, Jupyter
-              Notebook, LaTeX, Visual Studio Code, Makefile, Linux Command Line,
-              Probability/Statistics.
-            </p>
-            {/* <a href="#" target="_blank" rel="noreferrer">
-              View project
-            </a> */}
+            <p className={styles.projectsDate}>January 2020 - September 2022</p>
+            <ul className={styles.projectsList}>
+              <li>
+                Distributed multi-threaded calculations across nodes of a
+                high-performance computing (HPC) cluster via C, MPI, and Linux
+              </li>
+              <li>
+                Cleaned, visualized, and analyzed data with IPython/Jupyter,
+                Numpy, Pandas, Matplotlib and SciPy
+              </li>
+              <li>
+                Constructed scheme for incorporating novel effects into
+                simulations of systems studied for quantum computing
+                applications
+              </li>
+            </ul>
+            <a
+              href="https://www.proquest.com/docview/2779955260"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Publication
+            </a>
+            <a
+              href="https://github.com/pfischer1687/ms-thesis"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Source Code
+            </a>
           </div>
         </section>
 
@@ -93,25 +133,36 @@ const Projects = () => {
 
           <div>
             <h3>
-              Rules generating elementary particle behavior in the Wolfram Model
+              Wolfram Physics Project: Rules Generating Elementary Particle
+              Behavior in Wolfram Model
             </h3>
-            <p>
-              Wolfram Physics Project Winter School 2021. Built a framework for
-              discovering the rules which induce particle-like motion in
-              topological defects on a hypergraph. Featured Contributor Badge.
-            </p>
+            <p className={styles.projectsDate}>December 2020 – January 2021</p>
+            <ul className={styles.projectsList}>
+              <li>
+                Generated hypergraph defect evolutions via Wolfram programming
+                language and utilized machine learning to find clusters
+              </li>
+              <li>
+                Established framework for discovering rules which induce
+                particle-like motion in topological defects on a hypergraph
+              </li>
+              <li>
+                Selected to join exclusive collaboration of international
+                researchers where project was awarded Staff Pick
+              </li>
+            </ul>
             <a
               href="https://community.wolfram.com/groups/-/m/t/2162975"
               target="_blank"
               rel="noreferrer"
             >
-              View project
+              Post
             </a>
           </div>
         </section>
 
         {/* <!-- Project 4 --> */}
-        <section className={styles.projectsItem}>
+        {/* <section className={styles.projectsItem}>
           <div>
             <StaticImage
               src="../images/using-dodd.png"
@@ -140,68 +191,7 @@ const Projects = () => {
               View project
             </a>
           </div>
-        </section>
-
-        {/* <!-- Project 5 --> */}
-        <section className={styles.projectsItem}>
-          <div>
-            <StaticImage
-              src="../images/an-objective.png"
-              alt="The graph of the percentage of students who answered a question incorrectly on their first try vs. the total C scores."
-            />
-          </div>
-
-          <div>
-            <h3>
-              An Objective Rating Scale for the Difficulty of Introductory
-              Mechanics Problems
-            </h3>
-            <p>
-              BS thesis (Loyola Marymount University, 2016). Honed a framework
-              for identifying the cognitive load required to solve mechanics
-              problems and designed an experiment to measure student homework
-              scores as a function of cognitive load.
-            </p>
-            <a
-              href="https://github.com/pfischer1687/Physics/blob/main/PHYS%20481%20Senior%20Thesis/phys_481_senior_thesis.pdf"
-              target="_blank"
-              rel="noreferrer"
-            >
-              View project
-            </a>
-          </div>
-        </section>
-
-        {/* <!-- Project 5 --> */}
-        {/* <section className={styles.projectsItem}>
-          <div>
-            <StaticImage
-              src="../images/an-objective.png"
-              alt="The graph of the percentage of students who answered a question incorrectly on their first try vs. the total C scores."
-            />
-          </div>
-
-          <div>
-            <h3>
-              An Objective Rating Scale for the Difficulty of Introductory
-              Mechanics Problems
-            </h3>
-            <p>
-              BS thesis (Loyola Marymount University, 2016). Honed a framework
-              for identifying the cognitive load required to solve mechanics
-              problems and designed an experiment to measure student homework
-              scores as a function of cognitive load.
-            </p>
-            <a
-              href="https://github.com/pfischer1687/Physics/blob/main/PHYS%20481%20Senior%20Thesis/phys_481_senior_thesis.pdf"
-              target="_blank"
-              rel="noreferrer"
-            >
-              View project
-            </a>
-          </div>
         </section> */}
-        {/* <!-- End of Project block. --> */}
       </section>
     </TerminalWrapper>
   );
