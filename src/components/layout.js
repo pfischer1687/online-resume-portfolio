@@ -45,7 +45,7 @@ const Layout = ({ is404 = false, children }) => {
               <div className={styles.contactLinks}>GitHub</div>
             </a>
             <a
-              href="https://www.linkedin.com/in/paul-fischer-816042127"
+              href="https://www.linkedin.com/in/paul-fischer1687"
               target="_blank"
               rel="noreferrer"
             >
