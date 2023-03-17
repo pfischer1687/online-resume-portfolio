@@ -14,9 +14,8 @@ const About = () => {
     >
       <h2 className={styles.aboutMe}>About Me</h2>
       <section className={styles.aboutItem}>
-        <div>
+        <div className={styles.aboutImg}>
           <StaticImage
-            className={styles.aboutImg}
             src="../images/about-me.png"
             alt="Photo of Paul Fischer."
           />
@@ -25,7 +24,7 @@ const About = () => {
           <p>
             Hi, I'm Paul. I love writing code for everything from websites to
             financial engineering, embedded systems, theoretical physics
-            research, and more. I am passionate about readability, testing,
+            research, and more! I am passionate about readability, testing,
             performance, and being a good teammate. Thank you for visitng my
             website, feel free to take a look at some of my recent projects
             below as well as the{" "}

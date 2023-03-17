@@ -11,7 +11,12 @@ const Projects = () => {
       catNumLetters={16}
     >
       <section className={`${styles.projects} divider`}>
-        <h2> Projects/Publications</h2>
+        <h2>
+          {" "}
+          Projects
+          <wbr />/<wbr />
+          Publications
+        </h2>
 
         {/* <!-- Project 1 --> */}
         <section className={styles.projectsItem}>
