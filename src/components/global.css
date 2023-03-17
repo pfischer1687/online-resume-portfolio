@@ -12,7 +12,7 @@ COLOR PALETTE
 ------------------------------*/
 :root {
   /* For typing animation */
-  --blink-count: 3;
+  --blink-count: 2;
   --blink-speed: 0.5s;
 }
 html {
@@ -102,14 +102,14 @@ h2 {
   background: black;
 }
 .typing::before {
-  animation: typingAnim 0.5s steps(var(--num-letters)) 0.25s forwards;
+  animation: typingAnim 0.25s steps(var(--num-letters)) 100ms forwards;
 }
 .typing::after {
   width: 15px;
   background: transparent;
 }
 .typing::after {
-  animation: typingAnim 0.5s steps(var(--num-letters)) 0.25s forwards,
+  animation: typingAnim 0.25s steps(var(--num-letters)) 100ms forwards,
     blinkingAnim var(--blink-speed) var(--blink-count);
 }
 @keyframes typingAnim {

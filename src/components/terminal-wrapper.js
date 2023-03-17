@@ -6,7 +6,7 @@ const TerminalWrapper = ({
   cdNumLetters,
   catNumLetters,
   children,
-  animationDelay = 100,
+  animationDelay = 0,
   lineBreak = true,
   precedesFooter = false,
 }) => {
@@ -21,11 +21,11 @@ const TerminalWrapper = ({
       setTimeout(() => setIsCdVisible(isSectionVisible), animationDelay);
       setTimeout(
         () => setIsCatVisible(isSectionVisible),
-        animationDelay + 1500
+        animationDelay + 1000
       );
       setTimeout(
         () => setIsContentVisible(isSectionVisible),
-        animationDelay + 3000
+        animationDelay + 2000
       );
     },
   });

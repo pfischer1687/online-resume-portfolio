@@ -9,7 +9,7 @@ const About = () => {
       sectionName="about"
       cdNumLetters={10}
       catNumLetters={13}
-      animationDelay={1500}
+      animationDelay={1000}
       lineBreak={false}
     >
       <h2 className={styles.aboutMe}>About Me</h2>

@@ -9,7 +9,7 @@ const Layout = ({ is404 = false, children }) => {
   const [isNavVisible, setIsNavVisible] = React.useState(false);
 
   React.useEffect(() => {
-    let navMenuDelay = 1500;
+    let navMenuDelay = 1000;
     if (is404) navMenuDelay = 0;
     setTimeout(() => setIsNavVisible(true), navMenuDelay);
   });
