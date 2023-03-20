@@ -32,5 +32,11 @@ module.exports = {
         icon: `src/images/favicon.svg`,
       },
     },
+    {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        precachePages: [`/404`],
+      },
+    },
   ],
 };

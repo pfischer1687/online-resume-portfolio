@@ -31,62 +31,83 @@ const Layout = ({ is404 = false, children }) => {
         </h3>
         <h3 className={isNavVisible ? "show" : "hidden"}>
           <div className={styles.navLinks}>
-            <a
-              href="https://github.com/pfischer1687"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <div>
-                <StaticImage
-                  src="../images/github-logo.png"
-                  alt="GitHub logo"
-                />
-              </div>
-              <div className={styles.contactLinks}>GitHub</div>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/paul-fischer1687"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <div>
-                <StaticImage
-                  src="../images/linkedin-logo.png"
-                  alt="LinkedIn logo"
-                />
-              </div>
-              <div className={styles.contactLinks}>LinkedIn</div>
-            </a>
-            <a
-              href="https://twitter.com/PaulFis43236408"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <div>
-                <StaticImage
-                  src="../images/twitter-logo.png"
-                  alt="Twitter logo"
-                />
-              </div>
-              <div className={styles.contactLinks}>Twitter</div>
-            </a>
-            <a
-              href="mailto:paulfischerdev@gmail.com"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <div>
-                <StaticImage src="../images/gmail-logo.png" alt="Gmail logo" />
-              </div>
-              <div
-                className={`${styles.contactLinks} ${styles.gmailName}`}
-              ></div>
-            </a>
-            <Link to={is404 ? "/" : "#about"}>about</Link>{" "}
-            <Link to={is404 ? "/" : "#projects"}>projects</Link>
-            <Link to={is404 ? "/" : "#education"}>education</Link>
-            <Link to={is404 ? "/" : "#experience"}>experience</Link>{" "}
-            <Link to="/404">404</Link>
+            <div>
+              <a
+                href="https://github.com/pfischer1687"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <div>
+                  <StaticImage
+                    src="../images/github-logo.png"
+                    alt="GitHub logo"
+                  />
+                </div>
+                <div className={styles.contactLinks}>GitHub</div>
+              </a>
+            </div>
+            <div>
+              <a
+                href="https://www.linkedin.com/in/paul-fischer1687"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <div>
+                  <StaticImage
+                    src="../images/linkedin-logo.png"
+                    alt="LinkedIn logo"
+                  />
+                </div>
+                <div className={styles.contactLinks}>LinkedIn</div>
+              </a>
+            </div>
+            <div>
+              <a
+                href="https://twitter.com/PaulFis43236408"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <div>
+                  <StaticImage
+                    src="../images/twitter-logo.png"
+                    alt="Twitter logo"
+                  />
+                </div>
+                <div className={styles.contactLinks}>Twitter</div>
+              </a>
+            </div>
+            <div>
+              <a
+                href="mailto:paulfischerdev@gmail.com"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <div>
+                  <StaticImage
+                    src="../images/gmail-logo.png"
+                    alt="Gmail logo"
+                  />
+                </div>
+                <div
+                  className={`${styles.contactLinks} ${styles.gmailName}`}
+                ></div>
+              </a>
+            </div>
+            <div>
+              <Link to={is404 ? "/" : "#about"}>about</Link>
+            </div>{" "}
+            <div>
+              <Link to={is404 ? "/" : "#projects"}>projects</Link>
+            </div>
+            <div>
+              <Link to={is404 ? "/" : "#education"}>education</Link>
+            </div>
+            <div>
+              <Link to={is404 ? "/" : "#experience"}>experience</Link>
+            </div>{" "}
+            <div>
+              <Link to="/404">404</Link>
+            </div>
           </div>
         </h3>
       </nav>

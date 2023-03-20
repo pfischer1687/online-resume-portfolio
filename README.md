@@ -27,11 +27,13 @@ Paul Fischer
 - `gatsby@5.2.0`
 - `gatsby-plugin-image@3.2.0`
 - `gatsby-plugin-manifest@5.2.0`
+- `gatsby-plugin-offline@6.7.0`
 - `gatsby-plugin-sharp@5.2.0`
 - `gatsby-source-filesystem@5.2.0`
 - `gatsby-transformer-sharp@5.2.0`
 - `react@18.2.0`
 - `react-dom@18.2.0`
+- `react-intersection-observer@9.4.3`
 
 ## Keywords
 

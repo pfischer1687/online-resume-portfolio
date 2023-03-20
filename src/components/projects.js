@@ -25,7 +25,7 @@ const Projects = () => {
               src="../images/mean-variance.png"
               alt="The potential difference due to LLM compared to the electron configurations accepted by the Metropolis-Hastings algorithm."
             />
-            <h4 className={styles.ytVideoTitle}>Demo Video</h4>
+            <p className={styles.ytVideoTitle}>Demo Video</p>
             <iframe
               className={styles.ytVideo}
               src="https://www.youtube-nocookie.com/embed/nWyH2oi91QU"
