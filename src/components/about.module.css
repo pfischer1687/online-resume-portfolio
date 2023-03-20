@@ -3,6 +3,8 @@
 }
 .about-img {
   width: 265px;
+}
+.about-img img {
   border-radius: 5px;
 }
 

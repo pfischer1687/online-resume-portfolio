@@ -17,15 +17,22 @@ const Education = () => {
           <ul>
             <li>
               <span className={styles.educationTitle}>LinkedIn Learning:</span>{" "}
-              C Programming for Embedded Applications (12/2022), Advanced Linux:
-              The Linux Kernel (12/2022), Linux Device Drivers (12/2022),
-              Parallel and Concurrent Programming with C++ (12/2022), Learning
-              Assembly Language (12/2021)
+              Advanced NLP with Python for Machine Learning (01/2023), Parallel
+              and Concurrent Programming with C++ (12/2022), C Programming for
+              Embedded Applications (12/2022), Advanced Linux: The Linux Kernel
+              (12/2022), Linux Device Drivers (12/2022), Become a Full-Stack Web
+              Developer (10/2022), Tableau and R for Analytics Projects
+              (02/2022), Learning Assembly Language (12/2021), Ethical Hacking:
+              Scanning Networks (08/2021)
+            </li>
+            <li className={styles.certsBullet}>
+              <span className={styles.educationTitle}>Udemy:</span> Financial
+              Engineering and Artificial Intelligence in Python (01/2022)
             </li>
             <li className={styles.certsBullet}>
               <span className={styles.educationTitle}>Certifications:</span>{" "}
-              Wolfram Certified Level II in Multiparadigm Data Science
-              (07/2020), Certified LabVIEW Associate Developer (01/2021)
+              Certified LabVIEW Associate Developer (01/2021), Wolfram Certified
+              Level II in Multiparadigm Data Science (07/2020)
             </li>
           </ul>
         </section>

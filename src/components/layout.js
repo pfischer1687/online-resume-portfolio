@@ -32,66 +32,58 @@ const Layout = ({ is404 = false, children }) => {
         <h3 className={isNavVisible ? "show" : "hidden"}>
           <div className={styles.navLinks}>
             <div>
-              <a
-                href="https://github.com/pfischer1687"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <div>
-                  <StaticImage
-                    src="../images/github-logo.png"
-                    alt="GitHub logo"
-                  />
-                </div>
-                <div className={styles.contactLinks}>GitHub</div>
-              </a>
+              <StaticImage src="../images/github-logo.png" alt="GitHub logo" />
+              <div className={styles.contactLinks}>
+                <a
+                  href="https://github.com/pfischer1687"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  GitHub
+                </a>
+              </div>
             </div>
             <div>
-              <a
-                href="https://www.linkedin.com/in/paul-fischer1687"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <div>
-                  <StaticImage
-                    src="../images/linkedin-logo.png"
-                    alt="LinkedIn logo"
-                  />
-                </div>
-                <div className={styles.contactLinks}>LinkedIn</div>
-              </a>
+              <StaticImage
+                src="../images/linkedin-logo.png"
+                alt="LinkedIn logo"
+              />
+              <div className={styles.contactLinks}>
+                <a
+                  href="https://www.linkedin.com/in/paul-fischer1687"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  LinkedIn
+                </a>
+              </div>
             </div>
             <div>
-              <a
-                href="https://twitter.com/PaulFis43236408"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <div>
-                  <StaticImage
-                    src="../images/twitter-logo.png"
-                    alt="Twitter logo"
-                  />
-                </div>
-                <div className={styles.contactLinks}>Twitter</div>
-              </a>
+              <StaticImage
+                src="../images/twitter-logo.png"
+                alt="Twitter logo"
+              />
+              <div className={styles.contactLinks}>
+                <a
+                  href="https://twitter.com/PaulFis43236408"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Twitter
+                </a>
+              </div>
             </div>
             <div>
-              <a
-                href="mailto:paulfischerdev@gmail.com"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <div>
-                  <StaticImage
-                    src="../images/gmail-logo.png"
-                    alt="Gmail logo"
-                  />
-                </div>
-                <div
-                  className={`${styles.contactLinks} ${styles.gmailName}`}
-                ></div>
-              </a>
+              <StaticImage src="../images/gmail-logo.png" alt="Gmail logo" />
+              <div className={styles.contactLinks}>
+                <a
+                  href="mailto:paulfischerdev@gmail.com"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <div className={styles.gmailName}></div>
+                </a>
+              </div>
             </div>
             <div>
               <Link to={is404 ? "/" : "#about"}>about</Link>
