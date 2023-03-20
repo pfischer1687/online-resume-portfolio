@@ -16,8 +16,11 @@
   .contact-links {
     margin-top: -0.75rem;
   }
+  .gmail-name::before {
+    content: "paulfischerdev@g";
+  }
   .gmail-name::after {
-    content: "paulfischerdev@gmail.com";
+    content: ".com";
   }
 }
 @media screen and (max-width: 749px) {
@@ -34,7 +37,7 @@
   .contact-links {
     margin-top: -0.75rem;
   }
-  .gmail-name::after {
-    content: "Gmail";
+  .gmail-name::before {
+    content: "G";
   }
 }

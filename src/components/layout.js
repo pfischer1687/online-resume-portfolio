@@ -80,8 +80,9 @@ const Layout = ({ is404 = false, children }) => {
                   href="mailto:paulfischerdev@gmail.com"
                   target="_blank"
                   rel="noreferrer"
+                  aria-label="Gmail address"
                 >
-                  <div className={styles.gmailName}></div>
+                  <div className={styles.gmailName}>mail</div>
                 </a>
               </div>
             </div>
