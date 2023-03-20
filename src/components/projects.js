@@ -2,15 +2,21 @@ import * as React from "react";
 import * as styles from "./projects.module.css";
 import { StaticImage } from "gatsby-plugin-image";
 import TerminalWrapper from "./terminal-wrapper";
+import { useInView } from "react-intersection-observer";
 
 const Projects = () => {
+  const [videoRef, videoInVew] = useInView({
+    threshold: 0.1,
+    triggerOnce: true,
+  });
+
   return (
     <TerminalWrapper
       sectionName="projects"
       cdNumLetters={13}
       catNumLetters={16}
     >
-      <section className={`${styles.projects} divider`}>
+      <section ref={videoRef} className={`${styles.projects} divider`}>
         <h2>
           {" "}
           Projects
@@ -26,12 +32,14 @@ const Projects = () => {
               alt="The potential difference due to LLM compared to the electron configurations accepted by the Metropolis-Hastings algorithm."
             />
             <p className={styles.ytVideoTitle}>Demo Video</p>
-            <iframe
-              className={styles.ytVideo}
-              src="https://www.youtube-nocookie.com/embed/nWyH2oi91QU"
-              title="Mean-Variance Analyzer Demo"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
-            ></iframe>
+            {videoInVew && (
+              <iframe
+                className={styles.ytVideo}
+                src="https://www.youtube-nocookie.com/embed/nWyH2oi91QU"
+                title="Mean-Variance Analyzer Demo"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
+              />
+            )}
           </div>
 
           <div>
