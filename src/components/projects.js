@@ -172,6 +172,13 @@ const Projects = () => {
             >
               Post
             </a>
+            <a
+              href="https://github.com/pfischer1687/wolfram-physics-project"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Source Code
+            </a>
           </div>
         </section>
       </section>
