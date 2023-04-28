@@ -22,11 +22,14 @@ const About = () => {
         </div>
         <div className={styles.aboutDetails}>
           <p>
-            Hi, I'm Paul. I love writing code for everything from websites to
-            financial engineering, embedded systems, theoretical physics
-            research, and more! I am passionate about readability, testing,
-            performance, and being a good teammate. Thank you for visitng my
-            website, feel free to take a look at some of my recent projects
+            Hi, I'm Paul. During my Master's degree in Computational Physics, I
+            gained research experience writing multi-threaded simulations in C
+            for a high performance computing (HPC) cluster and leveraging Python
+            for data analysis. I am passionate about solving complex
+            optimization problems, writing readable, well-tested code, and being
+            a strong team player. I'm excited to continue learning more about
+            the latest trends in full-stack development. Thank you for visitng
+            my website, feel free to take a look at some of my recent projects
             below as well as the{" "}
             <a
               href="https://github.com/pfischer1687/online-resume-portfolio"

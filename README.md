@@ -40,12 +40,14 @@ Paul Fischer
 - Software Engineer
 - Web Developer
 - Financial Quantitative Analyst
+- Data Scientist
+- Computational Physicist
 - Resume
 - Portfolio
 
 ## License
 
-Unlicensed - © 2022, All rights reserved.
+Unlicensed - © 2023 All rights reserved.
 
 ## Scripts
 
