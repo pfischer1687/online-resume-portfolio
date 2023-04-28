@@ -33,7 +33,15 @@ const Education = () => {
             <li className={styles.certsBullet}>
               <span className={styles.educationTitle}>Certifications:</span>{" "}
               Certified LabVIEW Associate Developer (01/2021), Wolfram Certified
-              Level II in Multiparadigm Data Science (07/2020)
+              Level II in Multiparadigm Data Science (07/2020,{" "}
+              <a
+                href="https://github.com/pfischer1687/wolfram-data-science-bootcamp"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Source Code
+              </a>
+              )
             </li>
           </ul>
         </section>
