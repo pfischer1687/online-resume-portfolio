@@ -12,6 +12,7 @@ const Projects = () => {
 
   return (
     <TerminalWrapper
+      prevSectionName="~/about"
       sectionName="projects"
       cdNumLetters={13}
       catNumLetters={16}
@@ -63,7 +64,7 @@ const Projects = () => {
                 from multiple code reviewers via Git
               </li>
               <li>
-                Lighthouse report - Performance: 99, Accessibility: 97, Best
+                Lighthouse report - Performance: 100, Accessibility: 97, Best
                 Practices: 100, SEO: 100
               </li>
             </ul>

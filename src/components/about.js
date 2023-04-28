@@ -6,6 +6,7 @@ import TerminalWrapper from "./terminal-wrapper";
 const About = () => {
   return (
     <TerminalWrapper
+      prevSectionName="~"
       sectionName="about"
       cdNumLetters={10}
       catNumLetters={13}

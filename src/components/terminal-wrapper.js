@@ -2,6 +2,7 @@ import * as React from "react";
 import { useInView } from "react-intersection-observer";
 
 const TerminalWrapper = ({
+  prevSectionName,
   sectionName,
   cdNumLetters,
   catNumLetters,
@@ -35,7 +36,7 @@ const TerminalWrapper = ({
       <div ref={ref} className="content-wrap terminal-code">
         <h3 className={isCdVisible ? "show" : "hidden"}>
           <span className={"terminal-usr"}>guest@guest</span>:
-          <span className={"terminal-path"}>~</span>${" "}
+          <span className={"terminal-path"}>{prevSectionName}</span>${" "}
           <span
             style={{ "--num-letters": cdNumLetters }}
             className={isCdVisible ? "typing" : ""}

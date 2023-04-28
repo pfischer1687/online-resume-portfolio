@@ -5,6 +5,7 @@ import TerminalWrapper from "./terminal-wrapper";
 const Experience = () => {
   return (
     <TerminalWrapper
+      prevSectionName="~/education"
       sectionName="experience"
       cdNumLetters={15}
       catNumLetters={18}
