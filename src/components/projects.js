@@ -12,7 +12,7 @@ const Projects = () => {
 
   return (
     <TerminalWrapper
-      prevSectionName="~/about"
+      prevSectionName="~/experience"
       sectionName="projects"
       cdNumLetters={13}
       catNumLetters={16}

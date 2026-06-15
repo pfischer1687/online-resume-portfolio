@@ -9,6 +9,7 @@ const Education = () => {
       sectionName="education"
       cdNumLetters={14}
       catNumLetters={17}
+      precedesFooter={true}
     >
       <section className={`${styles.education} divider`}>
         <h2>Education</h2>
