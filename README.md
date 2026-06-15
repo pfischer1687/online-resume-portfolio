@@ -18,7 +18,6 @@
 Paul Fischer
 
 - Email: paulfischerdev@gmail.com
-- Twitter: [@PaulFis43236408](https://twitter.com/PaulFis43236408)
 - GitHub: [pfischer1687](https://github.com/pfischer1687)
 - Website: [www.paulfischer.dev](https://paulfischer.dev/)
 

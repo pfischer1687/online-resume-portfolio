@@ -109,7 +109,8 @@ h2 {
   background: transparent;
 }
 .typing::after {
-  animation: typingAnim 0.25s steps(var(--num-letters)) 100ms forwards,
+  animation:
+    typingAnim 0.25s steps(var(--num-letters)) 100ms forwards,
     blinkingAnim var(--blink-speed) var(--blink-count);
 }
 @keyframes typingAnim {

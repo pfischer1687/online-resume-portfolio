@@ -5,7 +5,7 @@ module.exports = {
   siteMetadata: {
     title: `Paul Fischer`,
     description: `Paul Fischer's online resume portfolio.`,
-    author: `@PaulFis43236408`,
+    author: `Paul Fischer`,
     siteUrl: `https://paulfischer.dev/`,
   },
   plugins: [
