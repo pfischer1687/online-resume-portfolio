@@ -9,9 +9,25 @@
 
 [View live site](https://paulfischer.dev/)
 
+## Getting Started
+
+```bash
+nvm use
+npm install
+npm run develop
+```
+
+Dev server: [http://localhost:8000](http://localhost:8000)
+
+Format with Prettier:
+
+```bash
+npx prettier --write .
+```
+
 ## Version
 
-1.0.0
+0.1.0
 
 ## Author
 
