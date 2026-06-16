@@ -39,30 +39,29 @@ const Projects = () => {
             <p className={styles.projectsDate}>February 2026 - May 2026</p>
             <ul className={styles.projectsList}>
               <li>
-                Developed RTOS-based embedded firmware on an STM32 Nucleo-F767ZI
-                using interrupt-driven IMU acquisition (MPU-6050 over I2C) and
-                multi-threaded task scheduling for real-time sensor processing.
+                Implemented RTOS-based firmware on an STM32F767ZI for real-time
+                pedometer tracking, driven by MPU-6050 data-ready interrupts and
+                multi-threaded sensor-processing pipelines.
               </li>
               <li>
-                Implemented a real-time signal processing pipeline including
-                high-pass filtering, magnitude computation, smoothing, and
-                slope-based zero-crossing step detection with hysteresis and
-                interval gating.
+                Developed a step-detection algorithm using filtered acceleration
+                magnitude, zero-crossing peak detection, hysteresis, and timing
+                constraints to reduce false positives.
               </li>
               <li>
-                Designed RTOS-based task coordination using message queues and
-                event signals for communication between IMU acquisition, DSP,
-                and step detection threads.
+                Architected inter-thread communication with lock-free queues and
+                event signaling to maintain deterministic execution under
+                real-time workloads.
               </li>
               <li>
-                Built Python-based hardware-in-the-loop (HITL) testing and
-                host-side tooling to automate build, flash, and validation
-                workflows for firmware behavior on physical devices.
+                Built automated host-side and hardware-in-the-loop test tooling
+                in Python, including firmware flashing, validation, and
+                telemetry capture.
               </li>
               <li>
-                Implemented USB-based command interface and real-time telemetry
-                streaming for session control, debugging, and analysis of
-                embedded system behavior.
+                Developed debugging infrastructure for streaming live DSP data
+                over USB and visualizing intermediate processing stages during
+                algorithm tuning.
               </li>
             </ul>
             <a
@@ -89,33 +88,25 @@ const Projects = () => {
             <p className={styles.projectsDate}>August 2025 - September 2025</p>
             <ul className={styles.projectsList}>
               <li>
-                Performed exploratory data analysis on an 18-class gesture
-                classification dataset using multimodal wearable sensor data
-                (IMU acceleration/orientation, thermopile, and time-of-flight
-                sensors), analyzing sequence structure, missing modalities, and
-                phase-based labeling.
+                Analyzed ~8,000 wearable-sensor sequences for an 18-class
+                gesture classification task, identifying sensor dropout patterns
+                and orientation-related effects that complicated model
+                generalization.
               </li>
               <li>
-                Investigated sensor behavior across sequences, identifying
-                systematic missing-data patterns, orientation-dependent signal
-                distortions, and differences in signal characteristics across
-                gesture phases and subjects.
+                Built an IMU-based feature pipeline combining temporal
+                segmentation with statistical and frequency-domain features
+                derived from FFT analysis.
               </li>
               <li>
-                Developed a time-series feature engineering pipeline for IMU
-                data including z-score normalization, segmentation of sequences
-                into temporal windows, and extraction of statistical and
-                FFT-based spectral features.
+                Trained and tuned a LightGBM baseline using Optuna and
+                stratified cross-validation, establishing a reference point for
+                future multimodal and sequence-model approaches.
               </li>
               <li>
-                Built a LightGBM baseline model using Optuna hyperparameter
-                tuning and stratified cross-validation, evaluated using the
-                macro F1 score.
-              </li>
-              <li>
-                Analyzed frequency-domain structure of repetitive motion and IMU
-                signal characteristics (including gravity-related components and
-                orientation effects) to guide feature design decisions.
+                Investigated signal-processing techniques including gravity
+                removal, spectral filtering, and orientation normalization to
+                improve robustness across subjects.
               </li>
             </ul>
             <a
@@ -156,25 +147,24 @@ const Projects = () => {
             <p className={styles.projectsDate}>May 2025</p>
             <ul className={styles.projectsList}>
               <li>
-                Built a Python CLI tool for real-time inspection of network
-                activity, correlating active sockets with local processes to
-                support system observability, diagnostics, and operational
-                debugging.
+                Built and published a Python CLI that correlates live network
+                connections with the local processes responsible for them,
+                providing real-time visibility into outbound system activity.
               </li>
               <li>
-                Implemented a network enrichment pipeline combining IP
-                geolocation, ASN/BGP routing information, and ownership metadata
-                to provide operational context for active connections.
+                Combined process inspection with IP geolocation, ASN, and
+                ownership lookups to surface context about remote hosts directly
+                in the terminal.
               </li>
               <li>
-                Developed process attribution capabilities linking network
-                activity to executable metadata, including process identifiers,
-                command-line arguments, and binary paths.
+                Developed automated threat heuristics and HTML reporting to
+                highlight potentially suspicious network behavior for further
+                investigation.
               </li>
               <li>
-                Designed a rule-based analysis framework to identify anomalous
-                connection patterns and generate structured reports for
-                investigation and troubleshooting.
+                Packaged the project for PyPI and built it with a typed,
+                test-driven Python workflow using Typer, Pydantic, Pyright,
+                Ruff, and pytest.
               </li>
             </ul>
             <a
@@ -208,22 +198,20 @@ const Projects = () => {
             <p className={styles.projectsDate}>January 2025 - February 2025</p>
             <ul className={styles.projectsList}>
               <li>
-                Proposed and implemented XX and YY interaction terms in addition
-                to the baseline ZZ couplings, incorporating
-                entanglement-sensitive interactions into the Hamiltonian and
-                increasing solution quality on some problem instances from
-                approximately 0.70 to approximately 0.90.
+                Introduced XX and YY coupling terms alongside the original ZZ
+                formulation and tested their impact on optimization performance,
+                improving results from roughly 0.70 to 0.90 on selected
+                instances.
               </li>
               <li>
-                Contributed to subsequent team efforts refining the Hamiltonian
-                formulation and ansatz design, helping improve solution quality
-                further to approximately 0.94 on multiple evaluated
-                configurations.
+                Worked with teammates on further Hamiltonian and ansatz
+                improvements, reaching approximately 0.94 on several benchmark
+                runs.
               </li>
               <li>
-                Refactored experimental Jupyter notebook code into a modular
-                Python package to support rapid experimentation with Hamiltonian
-                formulations, circuit architectures, and evaluation workflows.
+                Turned a collection of Jupyter notebooks into a modular Python
+                package, making it easier to iterate on Hamiltonian designs,
+                circuit structures, and evaluation code.
               </li>
             </ul>
           </div>
