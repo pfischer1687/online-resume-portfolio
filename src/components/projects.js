@@ -29,6 +29,210 @@ const Projects = () => {
         <section className={styles.projectsItem}>
           <div>
             <StaticImage
+              src="../images/rtos-pedometer.png"
+              alt="Step detection algorithm test plot from the RTOS Pedometer project."
+            />
+          </div>
+
+          <div>
+            <h3>RTOS Pedometer</h3>
+            <p className={styles.projectsDate}>February 2026 - May 2026</p>
+            <ul className={styles.projectsList}>
+              <li>
+                Developed RTOS-based embedded firmware on an STM32 Nucleo-F767ZI
+                using interrupt-driven IMU acquisition (MPU-6050 over I2C) and
+                multi-threaded task scheduling for real-time sensor processing.
+              </li>
+              <li>
+                Implemented a real-time signal processing pipeline including
+                high-pass filtering, magnitude computation, smoothing, and
+                slope-based zero-crossing step detection with hysteresis and
+                interval gating.
+              </li>
+              <li>
+                Designed RTOS-based task coordination using message queues and
+                event signals for communication between IMU acquisition, DSP,
+                and step detection threads.
+              </li>
+              <li>
+                Built Python-based hardware-in-the-loop (HITL) testing and
+                host-side tooling to automate build, flash, and validation
+                workflows for firmware behavior on physical devices.
+              </li>
+              <li>
+                Implemented USB-based command interface and real-time telemetry
+                streaming for session control, debugging, and analysis of
+                embedded system behavior.
+              </li>
+            </ul>
+            <a
+              href="https://github.com/pfischer1687/rtos-pedometer"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Source Code
+            </a>
+          </div>
+        </section>
+
+        {/* <!-- Project 2 --> */}
+        <section className={styles.projectsItem}>
+          <div>
+            <StaticImage
+              src="../images/kaggle-cmi.png"
+              alt="IMU acceleration data for one subject pulling the hair above their ears from the Kaggle CMI competition."
+            />
+          </div>
+
+          <div>
+            <h3>Kaggle: CMI – Detect Behavior with Sensor Data</h3>
+            <p className={styles.projectsDate}>August 2025 - September 2025</p>
+            <ul className={styles.projectsList}>
+              <li>
+                Performed exploratory data analysis on an 18-class gesture
+                classification dataset using multimodal wearable sensor data
+                (IMU acceleration/orientation, thermopile, and time-of-flight
+                sensors), analyzing sequence structure, missing modalities, and
+                phase-based labeling.
+              </li>
+              <li>
+                Investigated sensor behavior across sequences, identifying
+                systematic missing-data patterns, orientation-dependent signal
+                distortions, and differences in signal characteristics across
+                gesture phases and subjects.
+              </li>
+              <li>
+                Developed a time-series feature engineering pipeline for IMU
+                data including z-score normalization, segmentation of sequences
+                into temporal windows, and extraction of statistical and
+                FFT-based spectral features.
+              </li>
+              <li>
+                Built a LightGBM baseline model using Optuna hyperparameter
+                tuning and stratified cross-validation, evaluated using the
+                macro F1 score.
+              </li>
+              <li>
+                Analyzed frequency-domain structure of repetitive motion and IMU
+                signal characteristics (including gravity-related components and
+                orientation effects) to guide feature design decisions.
+              </li>
+            </ul>
+            <a
+              href="https://www.kaggle.com/code/lcooper1972/bfrb-detection-eda-deep-dive-into-wrist-sensor-da"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Exploratory Data Analysis (EDA)
+            </a>
+            <a
+              href="https://www.kaggle.com/code/lcooper1972/cmi-baseline-feature-engineering-and-lightgbm"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Feature Engineering & Model Development
+            </a>
+            <a
+              href="https://github.com/pfischer1687/kaggle-cmi-bfrb"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Source Code
+            </a>
+          </div>
+        </section>
+
+        {/* <!-- Project 3 --> */}
+        <section className={styles.projectsItem}>
+          <div>
+            <StaticImage
+              src="../images/netwatcher-cli.png"
+              alt="Screenshot of the Netwatcher CLI's network traffic visualization."
+            />
+          </div>
+
+          <div>
+            <h3>Netwatcher CLI</h3>
+            <p className={styles.projectsDate}>May 2025</p>
+            <ul className={styles.projectsList}>
+              <li>
+                Built a Python CLI tool for real-time inspection of network
+                activity, correlating active sockets with local processes to
+                support system observability, diagnostics, and operational
+                debugging.
+              </li>
+              <li>
+                Implemented a network enrichment pipeline combining IP
+                geolocation, ASN/BGP routing information, and ownership metadata
+                to provide operational context for active connections.
+              </li>
+              <li>
+                Developed process attribution capabilities linking network
+                activity to executable metadata, including process identifiers,
+                command-line arguments, and binary paths.
+              </li>
+              <li>
+                Designed a rule-based analysis framework to identify anomalous
+                connection patterns and generate structured reports for
+                investigation and troubleshooting.
+              </li>
+            </ul>
+            <a
+              href="https://github.com/pfischer1687/netwatcher-cli"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Source Code
+            </a>
+            <a
+              href="https://pypi.org/project/netwatcher-cli/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              PyPI Project
+            </a>
+          </div>
+        </section>
+
+        {/* <!-- Project 4 --> */}
+        <section className={styles.projectsItem}>
+          <div>
+            <StaticImage
+              src="../images/iquhack.png"
+              alt="Visualization of the parametrerized quantum circuit based on my team's ansatz at the MIT iQuHACK 2025 hackathon."
+            />
+          </div>
+
+          <div>
+            <h3>MIT iQuHack 2025: IonQ Challenge</h3>
+            <p className={styles.projectsDate}>January 2025 - February 2025</p>
+            <ul className={styles.projectsList}>
+              <li>
+                Proposed and implemented XX and YY interaction terms in addition
+                to the baseline ZZ couplings, incorporating
+                entanglement-sensitive interactions into the Hamiltonian and
+                increasing solution quality on some problem instances from
+                approximately 0.70 to approximately 0.90.
+              </li>
+              <li>
+                Contributed to subsequent team efforts refining the Hamiltonian
+                formulation and ansatz design, helping improve solution quality
+                further to approximately 0.94 on multiple evaluated
+                configurations.
+              </li>
+              <li>
+                Refactored experimental Jupyter notebook code into a modular
+                Python package to support rapid experimentation with Hamiltonian
+                formulations, circuit architectures, and evaluation workflows.
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        {/* <!-- Project 5 --> */}
+        <section className={styles.projectsItem}>
+          <div>
+            <StaticImage
               src="../images/mean-variance.png"
               alt="The potential difference due to LLM compared to the electron configurations accepted by the Metropolis-Hastings algorithm."
             />
@@ -88,7 +292,7 @@ const Projects = () => {
           </div>
         </section>
 
-        {/* <!-- Project 2 --> */}
+        {/* <!-- Project 6 --> */}
         <section className={styles.projectsItem}>
           <div>
             <StaticImage
@@ -136,7 +340,7 @@ const Projects = () => {
           </div>
         </section>
 
-        {/* <!-- Project 3 --> */}
+        {/* <!-- Project 7 --> */}
         <section className={styles.projectsItem}>
           <div>
             <StaticImage
