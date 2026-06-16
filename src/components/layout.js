@@ -59,21 +59,6 @@ const Layout = ({ is404 = false, children }) => {
               </div>
             </div>
             <div>
-              <StaticImage
-                src="../images/twitter-logo.png"
-                alt="Twitter logo"
-              />
-              <div className={styles.contactLinks}>
-                <a
-                  href="https://twitter.com/PaulFis43236408"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Twitter
-                </a>
-              </div>
-            </div>
-            <div>
               <StaticImage src="../images/gmail-logo.png" alt="Gmail logo" />
               <div className={styles.contactLinks}>
                 <a
@@ -89,16 +74,16 @@ const Layout = ({ is404 = false, children }) => {
             </div>
             <div>
               <Link to={is404 ? "/" : "#about"}>about</Link>
-            </div>{" "}
+            </div>
+            <div>
+              <Link to={is404 ? "/" : "#experience"}>experience</Link>
+            </div>
             <div>
               <Link to={is404 ? "/" : "#projects"}>projects</Link>
             </div>
             <div>
               <Link to={is404 ? "/" : "#education"}>education</Link>
             </div>
-            <div>
-              <Link to={is404 ? "/" : "#experience"}>experience</Link>
-            </div>{" "}
             <div>
               <Link to="/404">404</Link>
             </div>

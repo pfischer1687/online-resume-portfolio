@@ -22,11 +22,11 @@ const TerminalWrapper = ({
       setTimeout(() => setIsCdVisible(isSectionVisible), animationDelay);
       setTimeout(
         () => setIsCatVisible(isSectionVisible),
-        animationDelay + 1000
+        animationDelay + 1000,
       );
       setTimeout(
         () => setIsContentVisible(isSectionVisible),
-        animationDelay + 2000
+        animationDelay + 2000,
       );
     },
   });

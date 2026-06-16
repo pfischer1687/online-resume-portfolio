@@ -12,14 +12,14 @@ const IndexPage = () => {
       <div id="about">
         <About />
       </div>
+      <div id="experience">
+        <Experience />
+      </div>
       <div id="projects">
         <Projects />
       </div>
       <div id="education">
         <Education />
-      </div>
-      <div id="experience">
-        <Experience />
       </div>
     </Layout>
   );

@@ -9,16 +9,31 @@
 
 [View live site](https://paulfischer.dev/)
 
+## Getting Started
+
+```bash
+nvm use
+npm install
+npm run develop
+```
+
+Dev server: [http://localhost:8000](http://localhost:8000)
+
+Format with Prettier:
+
+```bash
+npx prettier --write .
+```
+
 ## Version
 
-1.0.0
+0.1.0
 
 ## Author
 
 Paul Fischer
 
 - Email: paulfischerdev@gmail.com
-- Twitter: [@PaulFis43236408](https://twitter.com/PaulFis43236408)
 - GitHub: [pfischer1687](https://github.com/pfischer1687)
 - Website: [www.paulfischer.dev](https://paulfischer.dev/)
 

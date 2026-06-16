@@ -2,7 +2,7 @@
   "name": "online-resume-portfolio",
   "private": true,
   "description": "Paul Fischer's online resume portfolio.",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "author": "Paul Fischer <paulfischerdev@gmail.com>",
   "scripts": {
     "build": "gatsby build",
@@ -24,13 +24,24 @@
     "react-intersection-observer": "^9.4.3"
   },
   "keywords": [
-    "web developer",
     "software engineer",
-    "financial quantitative analyst",
-    "data scientist",
+    "aerospace software engineer",
+    "full stack developer",
+    "backend engineer",
+    "simulation engineer",
     "computational physicist",
-    "resume",
-    "portfolio"
+    "python developer",
+    "rust developer",
+    "react developer",
+    "embedded systems",
+    "real-time systems",
+    "machine learning",
+    "signal processing",
+    "scientific computing",
+    "numerical methods",
+    "linux",
+    "portfolio",
+    "resume"
   ],
   "license": "UNLICENSED",
   "repository": {
@@ -39,5 +50,8 @@
   },
   "bugs": {
     "url": "https://github.com/pfischer1687/online-resume-portfolio/issues"
+  },
+  "devDependencies": {
+    "prettier": "^3.8.4"
   }
 }
